@@ -1,0 +1,71 @@
+[options]
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+scrollback_lines = 10000
+search_wrap = true
+#icon_name = terminal
+#geometry = 640x480
+
+font = Inconsolata 10
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+#browser = xdg-open
+
+# set size hints for the window
+#size_hints = false
+
+# Hide links that are no longer valid in url select overlay mode
+filter_unmatched_urls = true
+#background      = rgba(00,00,00,0.8)
+
+[colors]
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = rgba(00,00,00,0.8)
+
+# black
+color0  = #19180f
+color8  = #8e9497
+
+# red
+color1  = #c8945e
+color9  = #c8945e
+
+# green
+color2  = #1a729b
+color10 = #1a729b
+
+# yellow
+color3  = #3b97ad
+color11 = #3b97ad
+
+# blue
+color4  = #33a1ec
+color12 = #33a1ec
+
+# magenta
+color5  = #54b2ec
+color13 = #54b2ec
+
+# cyan
+color6  = #5dcdf7
+color14 = #5dcdf7
+
+# white
+color7  = #cbd4d9
+color15 = #cbd4d9

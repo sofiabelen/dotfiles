@@ -1,0 +1,2 @@
+#!/bin/bash
+dhcpcd enp0s20f0u2

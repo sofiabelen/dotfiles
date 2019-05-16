@@ -1,0 +1,7 @@
+# copy this to /etc/X11/xorg.conf.d/30-touchpad.conf
+
+Section "InputClass"
+	Identifier "Touchpads"
+	Driver "libinput"
+	Option "Tapping" "on"
+EndSection

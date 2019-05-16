@@ -1,0 +1,24 @@
+#######################################################
+# The file called vtex, make it better, make it recognize only tex files
+# while pressing
+for i in "$@"; do
+    if [[ ${i} == *.tex ]]; then
+        fileName=$i;
+        # Strip off path and extension, and convert to uppercase.
+        # although there is no need to turn into upper case
+        serverName=$(sed -e 's:\(.*/\)\?\(.*\)\.tex:\U\2\E:' <<< $i)
+        break;
+    fi
+done
+
+if [[ ${serverName} == '' ]]; then
+        echo 'not a tex file or no non-extension part, no server to create'
+else
+        # run in server mode
+        # now we need to make sure the forward search connects to the right server
+        # check in .vimrc or tex.vim to see if it is correct
+        echo 'creating server called $serverName'
+        exec vim --servername $serverName "$@"
+fi
+
+#######################################################
