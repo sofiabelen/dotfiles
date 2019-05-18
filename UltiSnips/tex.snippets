@@ -23,18 +23,18 @@ snippet template "Basic template" b
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
+\usepackage[english]{babel}
 \usepackage{amsmath, amssymb}
 
 \begin{document}
-	$0
-\end{document}
+	$1
+\end{document}$0
 endsnippet
 
 snippet beg "begin{} / end{}" bA
 \\begin{$1}
-	$0
-\\end{$1}
+	$2
+\\end{$1}$0
 endsnippet
 
 priority 100
@@ -242,8 +242,8 @@ snippet lrb "left\{ right\}" i
 \left\\{ ${1:${VISUAL}} \right\\} $0
 endsnippet
 
-snippet lr[ "left[ right]" i
-\left[ ${1:${VISUAL}} \right] $0
+snippet lr[ "left[ right]" iA
+\left[ ${1:${VISUAL}} \right]$0
 endsnippet
 
 snippet lra "leftangle rightangle" iA
@@ -255,7 +255,8 @@ snippet conj "conjugate" iA
 \overline{$1}$0
 endsnippet
 
-snippet dint "integral" w
+priority 1000
+snippet dint "integral" A
 \int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
 endsnippet
 
@@ -634,6 +635,11 @@ endsnippet
 
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
+endsnippet
+
+# My snippets
+snippet equ "equation" Ai
+equation
 endsnippet
 
 # vim:ft=snippets
