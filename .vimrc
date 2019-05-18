@@ -22,12 +22,6 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-" (latex-suite) REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-
-" (latex-suite) OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
-
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -50,14 +44,14 @@ set number relativenumber
 " if not, install gvim 
 set clipboard=unnamedplus
 
-"some lightline configs
+"lightline configs
 set laststatus=2
 set noshowmode
 let g:lightline = {
 \ 'colorscheme': 'wombat',
 \ }
 
-"for i3 config syntax highlighting
+"i3 config syntax highlighting
 aug i3config_ft_detection
   au!
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
@@ -65,9 +59,6 @@ aug end
 
 "enable autocompletion
 set wildmode=longest,list,full
-
-"split down and to the right
-set splitbelow splitright
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -94,3 +85,13 @@ let g:vimtex_compiler_method = "latexmk"
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
+"move between splits
+nnoremap <C-U> <C-W><C-J>
+nnoremap <C-I> <C-W><C-K>
+nnoremap <C-O> <C-W><C-L>
+nnoremap <C-Y> <C-W><C-H>
+
+nnoremap r <C-R>
+
+"split down and to the right
+set splitbelow splitright
