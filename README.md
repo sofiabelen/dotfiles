@@ -1,6 +1,5 @@
 # dotfiles
 
-Just my dot files
 
 OS: Arch Linux\
 WM: i3-gaps\
