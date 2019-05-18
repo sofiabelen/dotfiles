@@ -243,8 +243,8 @@ bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf
 bindsym Mod1+8 exec zathura ~/Documents/Russian/В\ мире\ людей\!\ 3.1.pdf  
 bindsym Mod1+9 exec zathura ~/Documents/Math/stewart-calculus-8th-edition-2016.pdf
 
-#Open Firefox
-bindsym Mod1+f exec firefox
+#Open Qutebrowser
+bindsym Mod1+f exec qutebrowser
 
 #allow floating window for tomaatti
 for_window [title="(?i)tomaatti" class="(?i)tk"] floating enable move position center urgent
