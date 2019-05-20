@@ -132,32 +132,10 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e  exit
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
+bindsym Control+h resize shrink width 10 px or 10 ppt
+bindsym Control+j resize grow height 10 px or 10 ppt
+bindsym Control+k resize shrink height 10 px or 10 ppt
+bindsym Control+l resize grow width 10 px or 10 ppt
 
 set $bg-color           #2f343f
 set $inactive-bg-color   #2f343f
@@ -205,7 +183,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
+#bindsym XF86TouchpadToggle exec /usr/local/bin/toggletouchpad.sh # toggle touchpad
 
 #betterlockscreen 
 #exec_always --no-startup-id betterlockscreen -u
@@ -225,9 +203,9 @@ exec_always xset s off
 exec_always xset -dpms
 
 # Gaps
-for_window [class="^.*"] border pixel 0
-gaps inner 4
-gaps outer 3
+#for_window [class="^.*"] border pixel 0
+#gaps inner 4
+#gaps outer 3
 
 #Remove window title bar and borders
 new_window 1pixel
