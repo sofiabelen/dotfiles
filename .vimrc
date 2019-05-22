@@ -4,18 +4,18 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-    Plugin 'VundleVim/Vundle.vim'
-   " Plugin 'KeitaNakamura/tex-conceal.vim'
-    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-    Plugin 'ascenator/L9', {'name': 'newL9'}
-   " Plugin 'gerw/vim-latex-suite'
-    Plugin 'itchyny/lightline.vim'
-    Plugin 'mboughaba/i3config.vim'
-    Plugin 'tpope/vim-eunuch'
-    Plugin 'lervag/vimtex'
-    Plugin 'vim-syntastic/syntastic'
-    Plugin 'SirVer/ultisnips'
-   " Plugin 'honza/vim-snippets'
+Plugin 'VundleVim/Vundle.vim'
+" Plugin 'KeitaNakamura/tex-conceal.vim'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'ascenator/L9', {'name': 'newL9'}
+" Plugin 'gerw/vim-latex-suite'
+Plugin 'itchyny/lightline.vim'
+Plugin 'mboughaba/i3config.vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'lervag/vimtex'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
@@ -53,8 +53,8 @@ let g:lightline = {
 
 "i3 config syntax highlighting
 aug i3config_ft_detection
-  au!
-  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+au!
+au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
 aug end
 
 "enable autocompletion
@@ -91,7 +91,7 @@ nnoremap <C-I> <C-W><C-K>
 nnoremap <C-O> <C-W><C-L>
 nnoremap <C-Y> <C-W><C-H>
 
-nnoremap r <C-R>
-
 "split down and to the right
 set splitbelow splitright
+
+#inoremap <Space><Space> <Esc>/<++><Enter>"_c4l 
