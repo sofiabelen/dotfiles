@@ -19,7 +19,7 @@
 
 ## Always restore open sites when qutebrowser is reopened.
 ## Type: Bool
-# c.auto_save.session = False
+c.auto_save.session = True
 
 ## Backend to use to display websites. qutebrowser supports two different
 ## web rendering engines / backends, QtWebKit and QtWebEngine. QtWebKit
@@ -33,7 +33,8 @@
 ## Valid values:
 ##   - webengine: Use QtWebEngine (based on Chromium).
 ##   - webkit: Use QtWebKit (based on WebKit, similar to Safari).
-# c.backend = 'webengine'
+c.backend = 'webengine'
+# c.backend = 'webkit'
 
 ## This setting can be used to map keys to other keys. When the key used
 ## as dictionary-key is pressed, the binding for the key used as
