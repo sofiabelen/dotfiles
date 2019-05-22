@@ -94,4 +94,4 @@ nnoremap <C-Y> <C-W><C-H>
 "split down and to the right
 set splitbelow splitright
 
-#inoremap <Space><Space> <Esc>/<++><Enter>"_c4l 
+"inoremap <Space><Space> <Esc>/<++><Enter>"_c4l 
