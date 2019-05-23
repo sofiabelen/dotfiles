@@ -4,7 +4,7 @@
 OS: Arch Linux\
 WM: i3-gaps\
 Terminal: termite\
-Compositor: GabrielTenma/compton-kawase-blur:\
+Compositor: GabrielTenma/compton-kawase-blur\
 File manager: ranger\
 Web browser: qutebrowser
 
