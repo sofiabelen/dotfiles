@@ -12,7 +12,7 @@ search_wrap = true
 #icon_name = terminal
 #geometry = 640x480
 
-font = Inconsolata 10
+font = Inconsolata 11
 
 # "system", "on" or "off"
 cursor_blink = system
@@ -21,14 +21,14 @@ cursor_blink = system
 cursor_shape = block
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
+browser = $BROWSER
 
 # set size hints for the window
 #size_hints = false
 
 # Hide links that are no longer valid in url select overlay mode
 filter_unmatched_urls = true
-#background      = rgba(00,00,00,0.8)
+#background      = rgba(00,00,00,0.75)
 
 [colors]
 
@@ -36,36 +36,36 @@ filter_unmatched_urls = true
 foreground      = #ffffff
 foreground_bold = #ffffff
 cursor          = #ffffff
-background      = rgba(00,00,00,0.8)
+background      = rgba(00,00,00,0.9)
 
 # black
-color0  = #0d1019
-color8  = #9a9188
+color0  = #19180f
+color8  = #8e9497
 
 # red
-color1  = #d2a65c
-color9  = #d2a65c
+color1  = #c8945e
+color9  = #c8945e
 
 # green
-color2  = #336584
-color10 = #336584
+color2  = #1a729b
+color10 = #1a729b
 
 # yellow
-color3  = #56758a
-color11 = #56758a
+color3  = #3b97ad
+color11 = #3b97ad
 
 # blue
-color4  = #39af8a
-color12 = #39af8a
+color4  = #33a1ec
+color12 = #33a1ec
 
 # magenta
-color5  = #728594
-color13 = #728594
+color5  = #54b2ec
+color13 = #54b2ec
 
 # cyan
-color6  = #a29d9e
-color14 = #a29d9e
+color6  = #5dcdf7
+color14 = #5dcdf7
 
 # white
-color7  = #dcd0c3
-color15 = #dcd0c3
+color7  = #cbd4d9
+color15 = #cbd4d9
