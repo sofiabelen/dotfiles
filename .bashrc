@@ -27,6 +27,7 @@ alias cfv='vim ~/.vimrc'
 alias cfi='vim ~/.config/i3/config'
 alias cfr='vim ~/.config/ranger/rc.conf'
 alias cft='vim ~/.config/termite/config'
+alias cfp='vim ~/.config/polybar/config'
 
 #
 # # ex - archive extractor
@@ -52,3 +53,9 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
+export BROWSER=/usr/bin/qutebrowser
