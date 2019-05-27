@@ -18,7 +18,7 @@ font pango: Ubuntu 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec $browser
+bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run 
 
