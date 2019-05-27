@@ -1838,3 +1838,22 @@ dracula.draw.blood(c, {
         'size': 10
     }
 })
+
+# When to show the tab bar.
+# Type: String
+# Valid values:
+#   - always: Always show the tab bar.
+#   - never: Always hide the tab bar.
+#   - multiple: Hide the tab bar if only one tab is open.
+#   - switching: Show the tab bar when switching tabs.
+# c.tabs.show = 'switching'
+c.tabs.show = 'switching'
+
+
+# Time to show the tab bar before hiding it when tabs.show is set to
+# 'switching'.
+# Type: Int
+c.tabs.show_switching_delay = 1000
+
+# use xb to toggle statusbar
+config.bind('xb', 'config-cycle statusbar.hide')
