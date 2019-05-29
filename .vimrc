@@ -8,16 +8,18 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'KeitaNakamura/tex-conceal.vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
-" Plugin 'gerw/vim-latex-suite'
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
 Plugin 'mboughaba/i3config.vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vimtex'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 " Plugin 'honza/vim-snippets'
+Plugin 'dylanaraps/wal.vim'
+" Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
+colorscheme wal
 
 filetype plugin indent on
 syntax on
@@ -45,11 +47,9 @@ set number relativenumber
 set clipboard=unnamedplus
 
 "lightline configs
-set laststatus=2
-set noshowmode
-let g:lightline = {
-\ 'colorscheme': 'wombat',
-\ }
+"let g:lightline = {'colorscheme':'wombat'}
+"set laststatus=2
+"set noshowmode
 
 "i3 config syntax highlighting
 aug i3config_ft_detection
