@@ -1,7 +1,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #FF2f343f
-background-alt = #FF676E7D
+background = #002f343f
+background-alt = #88676E7D
 ;foreground = ${xrdb:color7:#222}
 foreground = #f3f4f5
 foreground-alt = #676E7D
@@ -41,7 +41,7 @@ font-3 = "Noto Sans:size=11;1"
 
 modules-left =  i3
 modules-center = time 
-modules-right = pulseaudio  battery wlan ip  date  powermenu
+modules-right = pulseaudio  battery wlan ip  date powermenu
 
 tray-position = right
 tray-padding = 0
@@ -403,7 +403,9 @@ margin-bottom = 5
 [module/ip]
 type = custom/script
 ;exec = ip addr show dev wlp0s20f0u4 | awk '/inet /{print $2}'
-;exec = connmanctl state | grep State
-exec = /usr/lib/i3blocks/iface
+;exec = connmanctl state | grep State | awk '/State/ {print $3}'
+exec = iwgetid  -r
+;iwgetid | awk '{print $2}' | sed s/\"/\ /g
+;exec = /usr/lib/i3blocks/iface
 label-padding = 1
 format = <label>

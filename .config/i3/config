@@ -19,8 +19,15 @@ font pango: Ubuntu 8
 floating_modifier $mod
 
 bindsym $mod+Return exec $terminal
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run 
+bindsym Mod1+b exec $browser
+bindsym Mod1+f exec firefox
+bindsym Mod1+r exec $terminal -e ranger
+bindsym Mod1+m exec $terminal -e neomutt
+bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
+bindsym Mod1+w exec firefox https://web.whatsapp.com/
+bindsym Mod1+a exec anki
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -46,10 +53,10 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 bindsym $mod+a focus parent
 
@@ -93,7 +100,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e  exit
 
@@ -150,11 +157,10 @@ bindsym --release Print exec "scrot ~/Pictures/Screenshots/$(date --iso-8601='se
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
-#betterlockscreen 
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
 #just changed this
 #exec --no-startup-id betterlockscreen -w dim
-exec_always --no-startup-id parcellite -d
+exec_always --no-startup-id parcellite -n
 exec_always compton --config ~/.compton.conf
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec_always --no-startup-id flashfocus
@@ -168,11 +174,11 @@ exec_always xset -dpms
 
 # Gaps
 #for_window [class="^.*"] border pixel 0
-gaps inner 5
-gaps outer 3
+gaps inner 6
+gaps outer 1
 
 bindsym $mod+i gaps inner all set 0; gaps outer all set 0
-bindsym $mod+o gaps inner all set 5; gaps outer all set 3
+bindsym $mod+o gaps inner all set 6; gaps outer all set 1
 
 #Remove window title bar and borders
 #new_window 1pixel
@@ -185,10 +191,6 @@ bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
 bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
 bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
 bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
-bindsym Mod1+8 exec zathura ~/Documents/Russian/В\ мире\ людей\!\ 3.1.pdf  
+bindsym Mod1+8 exec zathura ~/Documents/Russian/Reading_rus3.pdf  
+bindsym Mod1+g exec zathura ~/Documents/Russian/grammar.pdf
 bindsym Mod1+9 exec zathura ~/Documents/Math/stewart-calculus-8th-edition-2016.pdf
-
-#Open Qutebrowser
-bindsym Mod1+f exec $browser
-bindsym Mod1+g exec surf -I google.com
-bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
