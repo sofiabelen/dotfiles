@@ -11,4 +11,4 @@ Web browser: qutebrowser\
 Pywal to change theme and wallpaper\
 Lockscreen: betterlockscreen
 
-![Alt text](Screenshots/2019-05-27T20:56:56+03:00.png?raw=true "Screenshot")
+![Alt text](Screenshots/22019-06-02T20:46:49+03:00.png?raw=true "Screenshot")
