@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # Import colorscheme from 'wal' asynchronously
@@ -15,7 +14,9 @@ PS1='[\u@\h \W]\$ '
 
 export PATH=$PATH:"$HOME/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"
+export BROWSER=/usr/bin/qutebrowser
 
+alias ls='ls --color=auto'
 alias vi='vim'
 alias vtx='vim --servername VIM'
 alias config='/usr/bin/git --git-dir=/home/sofia/.cfg/ --work-tree=/home/sofia'
@@ -28,6 +29,9 @@ alias cfi='vim ~/.config/i3/config'
 alias cfr='vim ~/.config/ranger/rc.conf'
 alias cft='vim ~/.config/termite/config'
 alias cfp='vim ~/.config/polybar/config'
+alias cfq='vim ~/.config/qutebrowser/config.py'
+alias cfc='vim ~/.compton.conf'
+alias cfz='vim ~/.config/zathura/zathurarc'
 
 #
 # # ex - archive extractor
@@ -57,5 +61,3 @@ ex ()
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
-
-export BROWSER=/usr/bin/qutebrowser
