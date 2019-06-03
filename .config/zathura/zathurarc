@@ -1,1 +1,2 @@
 map <C-i> recolor
+map xb toggle_statusbar
