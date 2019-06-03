@@ -1501,10 +1501,11 @@ c.url.default_page = 'https://www.shortcutfoo.com/app/dojos/qutebrowser/cheatshe
 ## `:open google qutebrowser`.
 ## Type: Dict
 c.url.searchengines = {"DEFAULT": "https://www.google.us/search?q={}"}
+#c.url.searchengines = {"DEFAULT": "https://www.duckduckgo.com/search?q={}"}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['https://www.shortcutfoo.com/app/dojos/qutebrowser/cheatsheet']
+c.url.start_pages = ['https://www.google.com/']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
