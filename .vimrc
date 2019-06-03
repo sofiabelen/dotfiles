@@ -5,18 +5,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'KeitaNakamura/tex-conceal.vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ascenator/L9', {'name': 'newL9'}
-" Plugin 'itchyny/lightline.vim'
 Plugin 'mboughaba/i3config.vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vimtex'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
 Plugin 'dylanaraps/wal.vim'
-" Plugin 'vim-airline/vim-airline'
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()
 colorscheme wal
@@ -49,7 +46,7 @@ set clipboard=unnamedplus
 "lightline configs
 "let g:lightline = {'colorscheme':'wombat'}
 "set laststatus=2
-"set noshowmode
+set noshowmode
 
 "i3 config syntax highlighting
 aug i3config_ft_detection
