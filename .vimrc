@@ -29,8 +29,6 @@ syntax on
 "
 " see :h vundle for more details or wiki for FAQ
 
-"let mapleader = ","
-
 set et
 set sw=4
 set smarttab
@@ -59,8 +57,8 @@ set wildmode=longest,list,full
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-l>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-u>"
+let g:UltiSnipsJumpBackwardTrigger="<c-i>"
 let g:UltiSnipsSnippetDirectories = ["/home/sofia/UltiSnips"]
 
 " If you want :UltiSnipsEdit to split your window.

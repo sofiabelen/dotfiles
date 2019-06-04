@@ -20,14 +20,21 @@ endglobal
 snippet template "Basic template" b
 \documentclass[a4paper]{article}
 
+\author{Sofia B. Lopez}
+\title{$1}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage[english]{babel}
 \usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{uni.bib}
 
 \begin{document}
-	$1
+\maketitle
+	$2
 \end{document}$0
 endsnippet
 
@@ -122,10 +129,6 @@ endsnippet
 context "math()"
 snippet // "Fraction" iA
 \\frac{$1}{$2}$0
-endsnippet
-
-snippet / "Fraction" i
-\\frac{${VISUAL}}{$1}$0
 endsnippet
 
 context "math()"
