@@ -1,0 +1,2 @@
+#!/bin/bash
+genzathurarc > $HOME/.config/zathura/zathurarc
