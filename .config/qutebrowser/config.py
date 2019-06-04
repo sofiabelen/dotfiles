@@ -1474,7 +1474,6 @@ c.backend = 'webengine'
 ## for a blank page.
 ## Type: FuzzyUrl
 c.url.default_page = 'https://www.shortcutfoo.com/app/dojos/qutebrowser/cheatsheet'
-
 ## URL segments where `:navigate increment/decrement` will search for a
 ## number.
 ## Type: FlagList
@@ -1500,8 +1499,14 @@ c.url.default_page = 'https://www.shortcutfoo.com/app/dojos/qutebrowser/cheatshe
 ## used by prepending the search engine name to the search term, e.g.
 ## `:open google qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {"DEFAULT": "https://www.google.us/search?q={}"}
+#c.url.searchengines = {"DEFAULT": "https://www.google.us/search?q={}"}
 #c.url.searchengines = {"DEFAULT": "https://www.duckduckgo.com/search?q={}"}
+
+c.url.searchengines["DEFAULT"] = "https://duckduckgo.com/?q={}" 
+c.url.searchengines["g"] = "https://www.google.us/search?q={}"
+c.url.searchengines["yt"] = "https://www.youtube.com/results?search_query={}"
+c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines["rd"] = "https://www.reddit.com/search/?q={}"
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl

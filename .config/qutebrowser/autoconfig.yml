@@ -4,4 +4,4 @@
 config_version: 2
 settings:
   statusbar.hide:
-    global: true
+    global: false
