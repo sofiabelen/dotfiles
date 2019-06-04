@@ -1832,18 +1832,18 @@ c.url.start_pages = ['https://www.google.com/']
 # config.bind('y', 'prompt-accept yes', mode='yesno')
 
 ## Dracula theme
-import dracula.draw
-
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    },
-    'font': {
-        'family': 'Menlo, Terminus, Monaco, Monospace',
-        'size': 10
-    }
-})
+#import dracula.draw
+#
+#dracula.draw.blood(c, {
+#    'spacing': {
+#        'vertical': 6,
+#        'horizontal': 8
+#    },
+#    'font': {
+#        'family': 'Menlo, Terminus, Monaco, Monospace',
+#        'size': 10
+#    }
+#})
 
 # When to show the tab bar.
 # Type: String
@@ -1852,9 +1852,8 @@ dracula.draw.blood(c, {
 #   - never: Always hide the tab bar.
 #   - multiple: Hide the tab bar if only one tab is open.
 #   - switching: Show the tab bar when switching tabs.
-# c.tabs.show = 'switching'
 c.tabs.show = 'switching'
-
+#c.tabs.show = 'always'
 
 # Time to show the tab bar before hiding it when tabs.show is set to
 # 'switching'.
@@ -1863,3 +1862,6 @@ c.tabs.show_switching_delay = 1000
 
 # use xb to toggle statusbar
 config.bind('xb', 'config-cycle statusbar.hide')
+
+#qutewal
+config.source('qutewal.py')

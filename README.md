@@ -10,7 +10,8 @@ File manager: ranger\
 Web browser: qutebrowser\
 Pywal to change theme and wallpaper\
 Lockscreen: betterlockscreen\
-Generate zathura colorscheme: GideonWolfe/Zathura-Pywal
+Zathura colorscheme: GideonWolfe/Zathura-Pywal\
+Qutebrowser colorscheme: jjzmajic/qutewal
 
 ![Alt text](Screenshots/2019-06-02T20:46:49+03:00.png?raw=true "Screenshot")
 ![Alt text](Screenshots/2019-06-02T20:56:18+03:00.png?raw=true "Screenshot")
