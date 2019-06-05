@@ -23,8 +23,8 @@ bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run 
 bindsym Mod1+b exec $browser
 bindsym Mod1+f exec firefox
-bindsym Mod1+r exec $terminal -e ranger
-bindsym Mod1+m exec $terminal -e neomutt
+bindsym Mod1+r exec $terminal -e runranger
+bindsym Mod1+m exec $terminal -e runmutt
 bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
 bindsym Mod1+w exec firefox https://web.whatsapp.com/
 bindsym Mod1+a exec anki
