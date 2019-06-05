@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wal -i $1 
+betterlockscreen -u $1 
+zth
