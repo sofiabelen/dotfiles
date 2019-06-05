@@ -1,3 +1,0 @@
-sudo pacman -S ntp
-sudo ntpdate pool.ntp.org
-hwclock --systohc

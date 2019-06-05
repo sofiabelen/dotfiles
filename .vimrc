@@ -90,3 +90,6 @@ nnoremap <C-Y> <C-W><C-H>
 set splitbelow splitright
 
 "inoremap <Space><Space> <Esc>/<++><Enter>"_c4l 
+
+"automatically run shortcuts script after saving folders or configs
+autocmd BufWritePost ~/Documents/folders,~/Documents/configs !bash shortcuts

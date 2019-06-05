@@ -1865,3 +1865,4 @@ config.bind('xb', 'config-cycle statusbar.hide')
 
 #qutewal
 config.source('qutewal.py')
+config.source('shortcuts.py')

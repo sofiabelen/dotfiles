@@ -1,0 +1,13 @@
+ff      ~/.auxiliar/folders 
+cc      ~/.auxiliar/configs
+cfb     ~/.bashrc
+cfv     ~/.vimrc
+cfr     ~/.config/ranger/rc.conf
+cfi     ~/.config/i3/config
+cfq     ~/.config/qutebrowser/config.py
+cfm     ~/.config/mutt/muttrc
+cfp     ~/.config/polybar/config
+cft     ~/.config/termite/config
+cfz     ~/.config/zathura/zathurarc
+cfs     ~/bin/shortcuts
+bi      ~/Documents/Latex/uni.bib
