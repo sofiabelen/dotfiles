@@ -111,20 +111,40 @@ bindsym Control+l resize grow width 10 px or 10 ppt
 
 bindsym $mod+n exec --no-startup-id flash_window
 
-set $bg-color           #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-#set_from_resource $urgent-bg-color i3wm.color3 #f0f0f0
-set $urgent-bg-color  #1a729b
-set $indicator-color     #67058e
 
-# window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $indicator-color 
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  $indicator-color
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  $indicator-color
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $fg-inactive i3wm.color10 #f0f0f0
+set_from_resource $bg i3wm.color0 #f0f0f0
+set_from_resource $urgent i3wm.color8 #f0f0f0
+
+# class                 border          backgr.         text            indicator child_border
+client.focused          $bg             $bg             $fg             $bg       $bg
+client.focused_inactive $bg             $bg             $fg-inactive    $bg       $bg
+client.unfocused        $bg             $bg             $fg-inactive    $bg       $bg
+client.urgent           $urgent         $urgent         $fg             $bg       $bg
+client.placeholder      $bg             $bg             $fg             $bg       $bg
+
+client.background       $bg
+
+#set $bg-color           #2f343f
+#set $inactive-bg-color   #2f343f
+#set $text-color          #f3f4f5
+#set $inactive-text-color #676E7D
+##set_from_resource $urgent-bg-color i3wm.color3 #f0f0f0
+#set $urgent-bg-color  #1a729b
+#set $indicator-color     #67058e
+#
+## window colors
+##                       border              background         text                 indicator
+#client.focused          $bg-color           $bg-color          $text-color          $indicator-color 
+#client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  $indicator-color
+#client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  $indicator-color
+#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
