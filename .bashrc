@@ -21,17 +21,6 @@ alias vi='vim'
 alias vtx='vim --servername VIM'
 alias config='/usr/bin/git --git-dir=/home/sofia/.cfg/ --work-tree=/home/sofia'
 alias sd='sudo shutdown now'
-alias cfi='vim ~/.config/i3/config'
-alias cfb='vim ~/.bashrc'
-alias cfm='vim ~/.config/mutt/muttrc'
-alias cfv='vim ~/.vimrc'
-alias cfi='vim ~/.config/i3/config'
-alias cfr='vim ~/.config/ranger/rc.conf'
-alias cft='vim ~/.config/termite/config'
-alias cfp='vim ~/.config/polybar/config'
-alias cfq='vim ~/.config/qutebrowser/config.py'
-alias cfc='vim ~/.compton.conf'
-alias cfz='vim ~/.config/zathura/zathurarc'
 
 #
 # # ex - archive extractor
@@ -61,3 +50,4 @@ ex ()
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
+source ~/.shortcuts
