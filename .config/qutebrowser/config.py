@@ -1507,6 +1507,7 @@ c.url.searchengines["g"] = "https://www.google.us/search?q={}"
 c.url.searchengines["yt"] = "https://www.youtube.com/results?search_query={}"
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
 c.url.searchengines["rd"] = "https://www.reddit.com/search/?q={}"
+c.url.searchengines["ct"] = "https://context.reverso.net/translation/russian-english/{}"
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
