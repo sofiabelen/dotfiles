@@ -55,26 +55,25 @@ bindsym $mod+e layout toggle split
 
 bindsym $mod+space floating toggle
 
-# change focus between tiling / floating windows
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 bindsym $mod+Shift+space focus mode_toggle
 
 bindsym $mod+a focus parent
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-set $ws1 1:Ⅰ
-set $ws2 2:Ⅱ
-set $ws3 3:Ⅲ
-set $ws4 4:Ⅳ
-set $ws5 5:Ⅴ
-set $ws6 6:Ⅵ
-set $ws7 7:Ⅶ
-set $ws8 8:Ⅷ
-set $ws9 9:Ⅸ
-set $ws10 10:Ⅹ
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
 
-# switch to workspace
-bindsym $mod+1 workspace $ws1
+bindsym $mod+1 workspace $ws1 
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
@@ -85,7 +84,17 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# move focused container to workspace
+bindsym $mod+KP_End     workspace $ws1 
+bindsym $mod+KP_Down    workspace $ws2
+bindsym $mod+KP_Next    workspace $ws3
+bindsym $mod+KP_Left    workspace $ws4
+bindsym $mod+KP_Begin   workspace $ws5
+bindsym $mod+KP_Right   workspace $ws6
+bindsym $mod+KP_Home    workspace $ws7
+bindsym $mod+KP_Up      workspace $ws8
+bindsym $mod+KP_Prior   workspace $ws9
+bindsym $mod+KP_Insert  workspace $ws10
+
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -97,20 +106,30 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# reload the configuration file
+bindsym $mod+Shift+KP_End    move container to workspace $ws1 
+bindsym $mod+Shift+KP_Down   move container to workspace $ws2
+bindsym $mod+Shift+KP_Next   move container to workspace $ws3
+bindsym $mod+Shift+KP_Left   move container to workspace $ws4
+bindsym $mod+Shift+KP_Begin  move container to workspace $ws5
+bindsym $mod+Shift+KP_Right  move container to workspace $ws6
+bindsym $mod+Shift+KP_Home   move container to workspace $ws7
+bindsym $mod+Shift+KP_Up     move container to workspace $ws8
+bindsym $mod+Shift+KP_Prior  move container to workspace $ws9
+bindsym $mod+Shift+KP_Insert move container to workspace $ws10
+
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+Shift+b move container to workspace back_and_forth
+
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+r restart
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e  exit
 
-bindsym Control+h resize shrink width 10 px or 10 ppt
-bindsym Control+j resize grow height 10 px or 10 ppt
-bindsym Control+k resize shrink height 10 px or 10 ppt
-bindsym Control+l resize grow width 10 px or 10 ppt
+bindsym Control+h resize shrink width 7 px or 7 ppt
+bindsym Control+j resize grow height 7 px or 7 ppt
+bindsym Control+k resize shrink height 7 px or 7 ppt
+bindsym Control+l resize grow width 7 px or 7 ppt
 
 bindsym $mod+n exec --no-startup-id flash_window
-
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
@@ -131,55 +150,17 @@ client.placeholder      $bg             $bg             $fg             $bg     
 
 client.background       $bg
 
-#set $bg-color           #2f343f
-#set $inactive-bg-color   #2f343f
-#set $text-color          #f3f4f5
-#set $inactive-text-color #676E7D
-##set_from_resource $urgent-bg-color i3wm.color3 #f0f0f0
-#set $urgent-bg-color  #1a729b
-#set $indicator-color     #67058e
-#
-## window colors
-##                       border              background         text                 indicator
-#client.focused          $bg-color           $bg-color          $text-color          $indicator-color 
-#client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  $indicator-color
-#client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  $indicator-color
-#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-# strip_workspace_numbers yes
-# position top
-#        status_command i3blocks -c ~/.config/i3/i3blocks.conf 
-# colors {
-#  background $bg-color
-#      separator #757575
-# #                  border             background         text
-#  focused_workspace  $bg-color          $bg-color          $text-color
-#  inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#  urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-# }
-#}
-
 exec_always start-pulseaudio-x11
-# Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-#Desktop screenshot
 bindsym --release Print exec "scrot ~/Pictures/PrivateScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 
-# Screen brightness controls
-# bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-# bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
-#just changed this
-#exec --no-startup-id betterlockscreen -w dim
 exec_always --no-startup-id parcellite -n
 exec_always compton --config ~/.compton.conf
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
@@ -192,21 +173,16 @@ exec_always xset s off
 #disable power savinf feature
 exec_always xset -dpms
 
-# Gaps
-#for_window [class="^.*"] border pixel 0
 gaps inner 6
 gaps outer 1
 
 bindsym $mod+i gaps inner all set 0; gaps outer all set 0
 bindsym $mod+o gaps inner all set 6; gaps outer all set 1
 
-#Remove window title bar and borders
-#new_window 1pixel
 hide_edge_borders both 
 default_border none
 default_floating_border none
 
-#Open math and physics pdfs
 bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
 bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
 bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
