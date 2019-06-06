@@ -106,6 +106,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Don't seem to be working
 bindsym $mod+Shift+KP_End    move container to workspace $ws1 
 bindsym $mod+Shift+KP_Down   move container to workspace $ws2
 bindsym $mod+Shift+KP_Next   move container to workspace $ws3
@@ -119,6 +120,9 @@ bindsym $mod+Shift+KP_Insert move container to workspace $ws10
 
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
+
+bindsym $mod+m move scratchpad
+bindsym $mod+comma scratchpad show
 
 bindsym $mod+Shift+c reload
 bindsym $mod+r restart
