@@ -17,7 +17,7 @@ rm -f $shell_shortcuts $ranger_shortcuts $qute_shortcuts
 (grep "source $HOME/.config/ranger/shortcuts.conf" $HOME/.config/ranger/rc.conf)>/dev/null || echo "source $HOME/.config/ranger/shortcuts.conf" >> $HOME/.config/ranger/rc.conf
 (grep "config.source('shortcuts.py')" $HOME/.config/qutebrowser/config.py)>/dev/null || echo "config.source('shortcuts.py')" >> $HOME/.config/qutebrowser/config.py
 
-awk '{print "alias "$1"=\"cd "$2" && ls -a\""}' $folders >> $shell_shortcuts
+awk '{print "alias "$1"=\"cd "$2"\""}' $folders >> $shell_shortcuts
 awk '{print "map g"$1" cd "$2"\nmap t"$1" tab_new "$2"\nmap m"$1" shell mv %s "$2"\nmap Y"$1" shell cp -rv %s "$2}' $folders >> $ranger_shortcuts
 awk '{print "config.bind(\";"$1"\", \"set downloads.location.directory "$2" ;; hint links download\")"}' $folders >> $qute_shortcuts
 

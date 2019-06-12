@@ -3,7 +3,5 @@
 
 config_version: 2
 settings:
-  downloads.location.directory:
-    global: ~/Pictures/Wallpapers
   statusbar.hide:
     global: true
