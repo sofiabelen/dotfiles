@@ -19,6 +19,7 @@ font pango: Ubuntu 8
 floating_modifier $mod
 
 bindsym $mod+Return exec $terminal
+bindsym $mod+p exec st
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run 
 bindsym Mod1+b exec $browser
@@ -50,7 +51,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 bindsym $mod+space floating toggle
@@ -106,18 +107,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# Don't seem to be working
-bindsym $mod+Shift+KP_End    move container to workspace $ws1 
-bindsym $mod+Shift+KP_Down   move container to workspace $ws2
-bindsym $mod+Shift+KP_Next   move container to workspace $ws3
-bindsym $mod+Shift+KP_Left   move container to workspace $ws4
-bindsym $mod+Shift+KP_Begin  move container to workspace $ws5
-bindsym $mod+Shift+KP_Right  move container to workspace $ws6
-bindsym $mod+Shift+KP_Home   move container to workspace $ws7
-bindsym $mod+Shift+KP_Up     move container to workspace $ws8
-bindsym $mod+Shift+KP_Prior  move container to workspace $ws9
-bindsym $mod+Shift+KP_Insert move container to workspace $ws10
-
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
 
@@ -165,6 +154,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
+bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
 exec_always compton --config ~/.compton.conf
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle

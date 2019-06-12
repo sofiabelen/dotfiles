@@ -10,7 +10,7 @@ clickable_url = true
 scrollback_lines = 10000
 search_wrap = true
 
-font = Inconsolata 11
+font = Ubuntu Mono 11
 
 # "system", "on" or "off"
 cursor_blink = system

@@ -409,3 +409,9 @@ exec = iwgetid  -r
 ;exec = /usr/lib/i3blocks/iface
 label-padding = 1
 format = <label>
+
+[module/weather]
+type = custom/script
+exec = $HOME/bin/weather | sed "s/*.Nizhny//g"
+label-padding = 1
+format = <label>
