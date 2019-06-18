@@ -4,18 +4,6 @@ set $browser qutebrowser
 
 font pango: Ubuntu 8
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8 
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 bindsym $mod+Return exec $terminal
@@ -29,6 +17,7 @@ bindsym Mod1+m exec $terminal -e runmutt
 bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
 bindsym Mod1+w exec firefox https://web.whatsapp.com/
 bindsym Mod1+a exec anki
+bindsym $mod+u exec xdotool mousemove 1500 0 
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -74,7 +63,7 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-bindsym $mod+1 workspace $ws1 
+bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
@@ -85,7 +74,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+KP_End     workspace $ws1 
+bindsym $mod+KP_End     workspace $ws1
 bindsym $mod+KP_Down    workspace $ws2
 bindsym $mod+KP_Next    workspace $ws3
 bindsym $mod+KP_Left    workspace $ws4
