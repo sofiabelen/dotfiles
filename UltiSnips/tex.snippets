@@ -17,7 +17,7 @@ def math():
 		return False
 endglobal
 
-snippet template "Basic template" b
+snippet temp "Basic template" b
 \documentclass[a4paper]{article}
 
 \author{Sofia B. Lopez}
@@ -31,6 +31,28 @@ snippet template "Basic template" b
 \usepackage{siunitx}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{uni.bib}
+
+\begin{document}
+\maketitle
+	$2
+\end{document}$0
+endsnippet
+
+snippet temprus "Template in russian" b
+\documentclass[a4paper]{article}
+
+\author{Sofia B. Lopez}
+\title{$1}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{uni.bib}
+\usepackage[russian,english]{babel}
+\usepackage{csquotes}
 
 \begin{document}
 \maketitle
