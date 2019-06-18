@@ -10,13 +10,12 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'mboughaba/i3config.vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vimtex'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'dylanaraps/wal.vim'
-Plugin 'junegunn/goyo.vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
-colorscheme wal
+"colorscheme wal
 
 filetype plugin indent on
 syntax on
@@ -32,7 +31,6 @@ syntax on
 set et
 set sw=4
 set smarttab
-map <f2> :w\|!python %
 
 set number relativenumber
 
@@ -44,7 +42,7 @@ set clipboard=unnamedplus
 "lightline configs
 "let g:lightline = {'colorscheme':'wombat'}
 "set laststatus=2
-set noshowmode
+"set noshowmode
 
 "i3 config syntax highlighting
 aug i3config_ft_detection
@@ -61,7 +59,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-u>"
 let g:UltiSnipsJumpBackwardTrigger="<c-i>"
 let g:UltiSnipsSnippetDirectories = ["/home/sofia/UltiSnips"]
 
-" If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
 " Highlight searching
@@ -77,8 +74,8 @@ let g:tex_flavor = "latex"
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_compiler_method = "latexmk"
-set conceallevel=1
-let g:tex_conceal='abdmg'
+"set conceallevel=1
+"let g:tex_conceal='abdmg'
 
 "move between splits
 nnoremap <C-U> <C-W><C-J>
@@ -93,3 +90,8 @@ set splitbelow splitright
 
 "automatically run shortcuts script after saving folders or configs
 autocmd BufWritePost ~/Documents/folders,~/Documents/configs !bash shortcuts
+
+map <leader>i :setlocal spell! spelllang=en_us<CR>
+map <leader>o :setlocal spell! spelllang=es<CR>
+map <leader>p :setlocal spell! spelllang=ru<CR>
+map <leader>f :NERDTreeToggle<CR>
