@@ -14,4 +14,6 @@ Zathura colorscheme: GideonWolfe/Zathura-Pywal\
 Qutebrowser colorscheme: jjzmajic/qutewal\
 Script to generate shortcuts shamelessly stolen from: LukeSmithxyz/shortcut-sync
 
+Latex Setup: vimtex + ultisnips + zathura
+
 ![Alt text](Pictures/Screenshots/screen.jpg?raw=true "Screenshot")
