@@ -41,7 +41,7 @@ font-3 = "Noto Sans:size=11;1"
 
 modules-left =  i3
 modules-center = time 
-modules-right = pulseaudio  battery wlan ip  date powermenu
+modules-right = pulseaudio battery wlan ip layout date powermenu
 
 tray-position = right
 tray-padding = 0
@@ -415,3 +415,10 @@ type = custom/script
 exec = $HOME/bin/weather | sed "s/*.Nizhny//g"
 label-padding = 1
 format = <label>
+
+[module/layout]
+type = custom/script
+exec = xkblayout-state print %s
+lable-padding =1
+format = <label>
+interval = 1

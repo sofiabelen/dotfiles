@@ -7,7 +7,6 @@ font pango: Ubuntu 8
 floating_modifier $mod
 
 bindsym $mod+Return exec $terminal
-bindsym $mod+p exec st
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run 
 bindsym Mod1+b exec $browser
@@ -146,10 +145,10 @@ bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/ora
 bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
 exec_always compton --config ~/.compton.conf
-exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 exec_always --no-startup-id wal -R
+exec --no-startup-id setxkbmap -model pc105 -layout us,ru,latam -option grp:alt_shift_toggle
 
 #disable screen saver feature
 exec_always xset s off
