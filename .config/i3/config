@@ -16,7 +16,9 @@ bindsym Mod1+m exec $terminal -e runmutt
 bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
 bindsym Mod1+w exec firefox https://web.whatsapp.com/
 bindsym Mod1+a exec anki
-bindsym $mod+u exec xdotool mousemove 1500 0 
+bindsym $mod+u exec xdotool mousemove 1500 1500
+bindsym $mod+c exec feh -F ~/Pictures/Wallpapers/black.jpg & xdotool mousemove 1500 1500 
+bindsym Mod1+g exec gimp
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -132,7 +134,7 @@ client.placeholder      $bg             $bg             $fg             $bg     
 client.background       $bg
 
 exec_always start-pulseaudio-x11
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id vol_up
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
@@ -157,6 +159,7 @@ exec_always xset -dpms
 
 gaps inner 6
 gaps outer 1
+smart_gaps on
 
 bindsym $mod+i gaps inner all set 0; gaps outer all set 0
 bindsym $mod+o gaps inner all set 6; gaps outer all set 1
@@ -169,6 +172,4 @@ bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
 bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
 bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
 bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
-bindsym Mod1+8 exec zathura ~/Documents/Russian/Reading_rus3.pdf  
-bindsym Mod1+g exec zathura ~/Documents/Russian/grammar.pdf
 bindsym Mod1+9 exec zathura ~/Documents/Math/stewart-calculus-8th-edition-2016.pdf
