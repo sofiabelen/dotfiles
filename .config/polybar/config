@@ -112,18 +112,6 @@ label-empty-padding = 2
 
 [module/i3]
 
-ws-icon-0=Ⅰ
-ws-icon-1=Ⅰ
-ws-icon-2=Ⅱ
-ws-icon-3=Ⅲ
-ws-icon-4=Ⅳ
-ws-icon-5=Ⅴ
-ws-icon-6=Ⅵ
-ws-icon-7=Ⅶ
-ws-icon-8=Ⅷ
-ws-icon-9=Ⅸ
-ws-icon-10=Ⅹ
-
 strip-wsnumbers = true
 
 type = internal/i3
