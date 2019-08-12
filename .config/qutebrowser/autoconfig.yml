@@ -3,5 +3,9 @@
 
 config_version: 2
 settings:
+  content.geolocation:
+    https://www.pobeda.aero: false
+  content.notifications:
+    https://passazhiram.ru: false
   statusbar.hide:
     global: true
