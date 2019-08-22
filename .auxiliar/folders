@@ -7,8 +7,10 @@ br      ~/Documents/Brainstorming
 m       ~/Documents/Math
 f       ~/Documents/Physics
 n       ~/Documents/Notes
+sc      ~/Documents/Scripting
 w       ~/Pictures/Wallpapers
 p       ~/Pictures
 s       ~/Pictures/PrivateScreenshots
+r       ~/Pictures/Random
 u       ~/Downloads
 c       ~/.config

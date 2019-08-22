@@ -3,9 +3,10 @@
 
 config_version: 2
 settings:
-  content.geolocation:
-    https://www.pobeda.aero: false
   content.notifications:
-    https://passazhiram.ru: false
+    https://turproezdka.ru: false
+    https://www.reddit.com: true
+  downloads.location.directory:
+    global: ~/Pictures/Wallpapers
   statusbar.hide:
-    global: true
+    global: false
