@@ -1502,8 +1502,10 @@ c.url.default_page = 'https://www.shortcutfoo.com/app/dojos/qutebrowser/cheatshe
 #c.url.searchengines = {"DEFAULT": "https://www.google.us/search?q={}"}
 #c.url.searchengines = {"DEFAULT": "https://www.duckduckgo.com/search?q={}"}
 
-c.url.searchengines["DEFAULT"] = "https://duckduckgo.com/?q={}" 
+c.url.searchengines["DEFAULT"] = "https://www.google.us/search?q={}"
+#c.url.searchengines["DEFAULT"] = "https://duckduckgo.com/?q={}" 
 c.url.searchengines["g"] = "https://www.google.us/search?q={}"
+c.url.searchengines["d"] = "https://duckduckgo.com/?q={}" 
 c.url.searchengines["yt"] = "https://www.youtube.com/results?search_query={}"
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
 c.url.searchengines["rd"] = "https://www.reddit.com/search/?q={}"
