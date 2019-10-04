@@ -19,6 +19,7 @@ bindsym Mod1+a exec anki
 bindsym $mod+u exec xdotool mousemove 1500 1500
 bindsym $mod+c exec feh -F ~/Pictures/Wallpapers/black.jpg & xdotool mousemove 1500 1500 
 bindsym Mod1+g exec gimp
+bindsym Mod1+p exec qutebrowser http://print.mipt.ru/#
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -159,7 +160,7 @@ exec_always xset -dpms
 
 gaps inner 6
 gaps outer 1
-smart_gaps on
+#smart_gaps on
 
 bindsym $mod+i gaps inner all set 0; gaps outer all set 0
 bindsym $mod+o gaps inner all set 6; gaps outer all set 1

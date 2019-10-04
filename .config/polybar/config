@@ -269,7 +269,7 @@ label = %date%
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-label-volume = VOL %percentage%%
+label-volume = --  Vol %percentage%%  --
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -322,7 +322,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = custom/script
-exec = /usr/lib/i3blocks/battery
+exec = $HOME/bin/battery
 label-padding = 1
 format = <label>
 

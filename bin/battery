@@ -50,7 +50,7 @@ if ($acpi =~ /(\d\d:\d\d):/) {
 }
 
 # print text
-print "$full_text\n";
+print "--   Bat $full_text   --\n";
 print "$short_text\n";
 
 # consider color and urgent flag only on discharge
