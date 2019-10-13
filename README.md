@@ -16,4 +16,4 @@ Script to generate shortcuts shamelessly stolen from: LukeSmithxyz/shortcut-sync
 
 Latex Setup: vimtex + ultisnips + zathura
 
-![Alt text](Pictures/Screenshots/screen.jpg?raw=true "Screenshot")
+![Alt text](Pictures/Screenshots/2019-10-13T16:28:43+03:00.png?raw=true "Screenshot")
