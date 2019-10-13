@@ -6,11 +6,5 @@
 
 config_version: 2
 settings:
-  content.geolocation:
-    https://www.google.com: false
   content.notifications:
-    http://print.mipt.ru: true
-  content.register_protocol_handler:
-    https://mail.google.com?extsrc=mailto&url=%25s: true
-  downloads.location.directory:
-    global: ~/Pictures/Wallpapers
+    https://www.reddit.com: false
