@@ -2,12 +2,16 @@ h       ~/
 d       ~/Documents
 l       ~/Documents/Latex
 re      ~/Documents/Latex/resume
+lb      ~/Documents/Latex/lab
+cl      ~/Documents/Latex/lab/lab1.4.2
 bl      ~/Documents/sofiabelen.github.io
 br      ~/Documents/Brainstorming
 m       ~/Documents/Math
 f       ~/Documents/Physics
 n       ~/Documents/Notes
 sc      ~/Documents/Scripting
+cpp     ~/Documents/cpp
+fr      ~/Documents/fortran
 w       ~/Pictures/Wallpapers
 p       ~/Pictures
 s       ~/Pictures/PrivateScreenshots
