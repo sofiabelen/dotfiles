@@ -38,12 +38,16 @@ snippet temp "Basic template" b
 \end{document}$0
 endsnippet
 
-snippet temprus "Template in russian" b
+snippet lab "Lab template in russian" b
 \documentclass[a4paper]{article}
 
-\author{Sofia B. Lopez}
+\author{Софиа Белен Лопес Висенс}
 \title{$1}
+\date{}
 
+\usepackage[margin=0.9in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage{textcomp}
@@ -56,7 +60,24 @@ snippet temprus "Template in russian" b
 
 \begin{document}
 \maketitle
-	$2
+\pagebreak
+\textbf{Цель Работы:}$2
+
+\textbf{В работе используются:}$3
+\\
+\\
+\\
+{\LARGE\bfТеоретическое знание}
+\\
+\\
+\\$4
+\\
+\\
+\\
+{\LARGE\bfЗадание}
+\\
+\\
+\\$5
 \end{document}$0
 endsnippet
 
@@ -149,6 +170,15 @@ endsnippet
 
 
 context "math()"
+
+snippet vF "vector F" Ai
+\vec{F}$0
+endsnippet
+
+snippet vv "vector" Ai
+\vec{$1}$0
+endsnippet
+
 snippet // "Fraction" iA
 \\frac{$1}{$2}$0
 endsnippet
