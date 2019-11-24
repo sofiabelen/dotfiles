@@ -38,6 +38,31 @@ snippet temp "Basic template" b
 \end{document}$0
 endsnippet
 
+snippet temprus "Basic template" b
+\documentclass[a4paper]{article}
+
+\author{Софиа Белен Лопес Висенс}
+\title{$1}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{uni.bib}
+\usepackage[russian,english]{babel}
+\usepackage{csquotes}
+
+\begin{document}
+\maketitle
+	$2
+\end{document}$0
+endsnippet
+
 snippet lab "Lab template in russian" b
 \documentclass[a4paper]{article}
 
