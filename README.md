@@ -19,5 +19,6 @@ Latex Setup: vimtex + ultisnips + zathura
 Anki for studying theorems and proofs <3
 
 ![Alt text](Pictures/Screenshots/2019-10-13T16:28:43+03:00.png?raw=true "Screenshot")
+![Alt text](Pictures/Screenshots/2019-11-11T13:18:45+03:00.png?raw=true "Screenshot")
 ![Alt text](Pictures/Screenshots/2020-01-15T01:11:53+03:00.png?raw=true "Anki1")
 ![Alt text](Pictures/Screenshots/2020-01-15T21:21:22+03:00.png?raw=true "Anki2")
