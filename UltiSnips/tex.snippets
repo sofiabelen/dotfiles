@@ -18,7 +18,7 @@ def math():
 endglobal
 
 snippet temp "Basic template" b
-\documentclass[a4paper]{article}
+\documentclass[a4paper,12pt]{article}
 
 \author{Sofia B. Lopez}
 \title{$1}
@@ -26,11 +26,7 @@ snippet temp "Basic template" b
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[english]{babel}
 \usepackage{amsmath, amssymb}
-\usepackage{siunitx}
-\usepackage[backend=biber]{biblatex}
-\addbibresource{uni.bib}
 
 \begin{document}
 \maketitle
@@ -39,32 +35,7 @@ snippet temp "Basic template" b
 endsnippet
 
 snippet temprus "Basic template" b
-\documentclass[a4paper]{article}
-
-\author{Софиа Белен Лопес Висенс}
-\title{$1}
-
-\usepackage[margin=0.9in]{geometry}
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage{textcomp}
-\usepackage{amsmath, amssymb}
-\usepackage{siunitx}
-\usepackage[backend=biber]{biblatex}
-\addbibresource{uni.bib}
-\usepackage[russian,english]{babel}
-\usepackage{csquotes}
-
-\begin{document}
-\maketitle
-	$2
-\end{document}$0
-endsnippet
-
-snippet lab "Lab template in russian" b
-\documentclass[a4paper]{article}
+\documentclass[a4paper,12pt]{article}
 
 \author{Софиа Белен Лопес Висенс}
 \title{$1}
@@ -78,10 +49,28 @@ snippet lab "Lab template in russian" b
 \usepackage{textcomp}
 \usepackage{amsmath, amssymb}
 \usepackage{siunitx}
-\usepackage[backend=biber]{biblatex}
-\addbibresource{uni.bib}
-\usepackage[russian,english]{babel}
-\usepackage{csquotes}
+
+\begin{document}
+\maketitle
+	$2
+\end{document}$0
+endsnippet
+
+snippet lab "Lab template in russian" b
+\documentclass[a4paper,12pt]{report}
+
+\author{Софиа Белен Лопес Висенс}
+\title{$1}
+\date{}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
 
 \begin{document}
 \maketitle
@@ -411,6 +400,10 @@ endsnippet
 
 snippet <= "leq" iA
 \le 
+endsnippet
+
+snippet hra "hook right arrow" iA
+\hookrightarrow 
 endsnippet
 
 snippet >= "geq" iA
