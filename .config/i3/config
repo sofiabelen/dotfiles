@@ -137,12 +137,16 @@ client.background       $bg
 exec_always start-pulseaudio-x11
 bindsym XF86AudioRaiseVolume exec --no-startup-id vol_up
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
+
+
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 bindsym --release Print exec "scrot ~/Pictures/PrivateScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+#fuck brighness... this toggles blugon - a blue light filter
+exec_always blugon
+bindsym XF86MonBrightnessUp exec blugon --setcurrent="+600" # light -A 5
+bindsym XF86MonBrightnessDown exec  blugon --setcurrent="-600" #light -U 5
 
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
 bindsym Control+Mod1+o exec gllock
@@ -169,8 +173,18 @@ hide_edge_borders both
 default_border none
 default_floating_border none
 
-bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
-bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
-bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
-bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
-bindsym Mod1+9 exec zathura ~/Documents/Math/stewart-calculus-8th-edition-2016.pdf
+#bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
+#bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
+#bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
+#bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
+#bindsym Mod1+9 exec zathura ~/Documents/Math/stewart-calculus-8th-edition-2016.pdf
+bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov3.pdf
+bindsym Mod1+1 exec zathura ~/Documents/second_semester/МАиИР_\(кроме\ ФОПФ\ и\ ФИВТ\)_2019.pdf
+bindsym Mod1+2 exec zathura ~/Documents/second_semester/ЛА_2019.pdf
+bindsym Mod1+3 exec zathura ~/Documents/second_semester/ekz_td_2018.pdf
+bindsym Mod1+4 exec zathura ~/Documents/second_semester/routes_spring20.pdf
+bindsym Mod1+5 exec zathura ~/Documents/second_semester/10ф.pdf
+bindsym Mod1+6 exec zathura ~/Documents/second_semester/linal.pdf
+bindsym Mod1+7 exec zathura ~/Documents/second_semester/Linear_Alg2020.pdf
+bindsym Mod1+8 exec zathura ~/Documents/second_semester/Мастер-класс\ “Горизонты\ физики”\ \(весна\ 2020\).pdf 
+bindsym Mod1+9 exec zathura ~/Documents/second_semester/1-kurs-vesna-2019_2020.pdf 

@@ -12,7 +12,7 @@ PS1='[\u@\h \W]\$ '
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
 
-export PATH=$PATH:"$HOME/bin"
+export PATH=$PATH:"$HOME/bin:/home/sofia/.local/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 export BROWSER=/usr/bin/qutebrowser
 
