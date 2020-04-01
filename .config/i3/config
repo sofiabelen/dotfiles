@@ -178,13 +178,14 @@ default_floating_border none
 #bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
 #bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
 #bindsym Mod1+9 exec zathura ~/Documents/Math/stewart-calculus-8th-edition-2016.pdf
-bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov3.pdf
-bindsym Mod1+1 exec zathura ~/Documents/second_semester/МАиИР_\(кроме\ ФОПФ\ и\ ФИВТ\)_2019.pdf
-bindsym Mod1+2 exec zathura ~/Documents/second_semester/ЛА_2019.pdf
-bindsym Mod1+3 exec zathura ~/Documents/second_semester/ekz_td_2018.pdf
-bindsym Mod1+4 exec zathura ~/Documents/second_semester/routes_spring20.pdf
-bindsym Mod1+5 exec zathura ~/Documents/second_semester/10ф.pdf
-bindsym Mod1+6 exec zathura ~/Documents/second_semester/linal.pdf
-bindsym Mod1+7 exec zathura ~/Documents/second_semester/Linear_Alg2020.pdf
-bindsym Mod1+8 exec zathura ~/Documents/second_semester/Мастер-класс\ “Горизонты\ физики”\ \(весна\ 2020\).pdf 
+
+bindsym Mod1+0 exec zathura ~/Documents/second_semester/Dennis_Rapaport-The_Art_of_Molecular_Dynamics_Simulation-EN.pdf
+bindsym Mod1+1 exec zathura ~/Documents/second_semester/Kirichenko_Termodinamika_i_molekulyarnaya_fizika.pdf
+bindsym Mod1+2 exec zathura ~/Documents/second_semester/Sivuhin_D.V._Kurs_obwej_fiziki._Tom_2-arpg75zl9bj.pdf
+bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
+bindsym Mod1+4 exec zathura ~/Documents/second_semester/МАиИР_\(кроме\ ФОПФ\ и\ ФИВТ\)_2019.pdf
+bindsym Mod1+5 exec zathura ~/Documents/second_semester/ЛА_2019.pdf
+bindsym Mod1+6 exec zathura ~/Documents/second_semester/ekz_td_2018.pdf
+bindsym Mod1+7 exec zathura ~/Documents/second_semester/routes_spring20.pdf
+bindsym Mod1+8 exec zathura ~/Documents/second_semester/IvanovGE_part1.pdf
 bindsym Mod1+9 exec zathura ~/Documents/second_semester/1-kurs-vesna-2019_2020.pdf 
