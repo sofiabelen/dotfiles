@@ -1,2 +1,6 @@
 #!/bin/bash
-dhcpcd enp0s20f0u2
+
+#dhcpcd enp0s20f0u2
+#ls /sys/class/net
+
+dhcpcd usb0
