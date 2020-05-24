@@ -157,8 +157,8 @@ exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 #exec_always --no-startup-id wal -R
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
-#exec --no-startup-id fehbg &
-exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec --no-startup-id ~/.fehbg &
+#exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 
 #disable screen saver feature
 exec_always xset s off
