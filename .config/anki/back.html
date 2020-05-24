@@ -1,0 +1,30 @@
+<div id="kard">
+{{cloze:Text}}<br>
+{{Extra}}
+</div>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.processSectionDelay = 0;
+MathJax.Hub.Config({
+  messageStyle: 'none',
+  showProcessingMessages: true,
+  tex2jax: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  }
+});
+</script>
+<script type="text/javascript">
+(function() {
+  if (window.MathJax != null) {
+    var card = document.querySelector('.card');
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub, card]);
+    return;
+  }
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_SVG';
+  document.body.appendChild(script);
+})();
+</script>
