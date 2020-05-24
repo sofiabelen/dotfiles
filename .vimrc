@@ -11,11 +11,13 @@ Plugin 'mboughaba/i3config.vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
-Plugin 'dylanaraps/wal.vim'
+"Plugin 'dylanaraps/wal.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'crusoexia/vim-dracula'
 
 call vundle#end()
 "colorscheme wal
+colorscheme dracula
 
 filetype plugin indent on
 syntax on

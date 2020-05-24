@@ -1867,5 +1867,17 @@ c.tabs.show_switching_delay = 1000
 config.bind('xb', 'config-cycle statusbar.hide')
 
 #qutewal
-config.source('qutewal.py')
+#config.source('qutewal.py')
 config.source('shortcuts.py')
+
+import dracula.draw
+
+# Load existing settings made via :set
+config.load_autoconfig()
+
+dracula.draw.blood(c, {
+    'spacing': {
+        'vertical': 6,
+        'horizontal': 8
+    }
+})

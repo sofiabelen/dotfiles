@@ -10,7 +10,7 @@ PS1='[\u@\h \W]\$ '
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
 export PATH=$PATH:"$HOME/bin:/home/sofia/.local/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"
@@ -54,4 +54,5 @@ fi
 set -o vi
 
 source ~/.shortcuts
-source ~/.cache/wal/colors-tty.sh
+#pywall theme on tty
+#source ~/.cache/wal/colors-tty.sh

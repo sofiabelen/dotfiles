@@ -1,33 +1,78 @@
-[options]
-scroll_on_output = false
-scroll_on_keystroke = true
-audible_bell = false
-mouse_autohide = false
-allow_bold = true
-dynamic_title = true
-urgent_on_bell = true
-clickable_url = true
-scrollback_lines = 10000
-search_wrap = true
-
-font = Ubuntu Mono 11
-
-# "system", "on" or "off"
-cursor_blink = system
-
-# "block", "underline" or "ibeam"
-cursor_shape = block
-
-# $BROWSER is used by default if set, with xdg-open as a fallback
-browser = $BROWSER
-
-# Hide links that are no longer valid in url select overlay mode
-filter_unmatched_urls = true
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
 
 [colors]
 
 # special
-foreground      = #ffffff
-foreground_bold = #ffffff
-cursor          = #ffffff
-background      = rgba(00,00,00,0.8)
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #262626
+
+# black
+color0  = #000000
+color8  = #4d4d4d
+
+# red
+color1  = #ff5555
+color9  = #ff6e67
+
+# green
+color2  = #50fa7b
+color10 = #5af78e
+
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
+
+# blue
+color4  = #bd93f9
+color12 = #caa9fa
+
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
+
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
+
+#[options]
+#scroll_on_output = false
+#scroll_on_keystroke = true
+#audible_bell = false
+#mouse_autohide = false
+#allow_bold = true
+#dynamic_title = true
+#urgent_on_bell = true
+#clickable_url = true
+#scrollback_lines = 10000
+#search_wrap = true
+#
+#font = Source Code Pro 10
+#
+## "system", "on" or "off"
+#cursor_blink = system
+#
+## "block", "underline" or "ibeam"
+#cursor_shape = block
+#
+## $BROWSER is used by default if set, with xdg-open as a fallback
+#browser = $BROWSER
+#
+## Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+#
+#[colors]
+#
+## special
+#foreground      = #ffffff
+#foreground_bold = #ffffff
+#cursor          = #ffffff
+#background      = rgba(00,00,00,0.8)
