@@ -154,7 +154,7 @@ exec_always --no-startup-id parcellite -n
 exec_always compton --config ~/.compton.conf
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
-exec_always --no-startup-id wal -R
+#exec_always --no-startup-id wal -R
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 
 #disable screen saver feature
