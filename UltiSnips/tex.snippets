@@ -56,6 +56,29 @@ snippet temprus "Basic template" b
 \end{document}$0
 endsnippet
 
+snippet pres "Presentation template in russian" b
+\documentclass[aspectratio=169]{beamer}
+
+\author{Софиа Белен Лопес Висенс}
+\title{\textbf{$1} }
+\date{}
+
+\usetheme{Copenhagen}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+
+\begin{document}
+\maketitle
+	$2
+\end{document}$0
+endsnippet
+
 snippet lab "Lab template in russian" b
 \documentclass[a4paper,12pt]{report}
 
@@ -96,6 +119,17 @@ $4
 \\\
 \\$5
 \end{document}$0
+endsnippet
+
+snippet col "columns" bA
+\begin{columns}
+  \begin{column}{$1\textwidth}
+  $3
+  \end{column}
+  \begin{column}{$2\textwidth}
+  $4
+  \end{column}
+\end{columns}$0
 endsnippet
 
 snippet beg "begin{} / end{}" bA
@@ -165,7 +199,7 @@ snippet iff "iff" Ai
 endsnippet
 
 snippet mk "Math" wA
-$${1}$`!p
+\(${1}\)`!p
 if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
 	snip.rv = ' '
 else:
@@ -198,27 +232,6 @@ endsnippet
 
 snippet // "Fraction" iA
 \\frac{$1}{$2}$0
-endsnippet
-
-context "math()"
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
-\\frac{`!p snip.rv = match.group(1)`}{$1}$0
-endsnippet
-
-priority 1000
-context "math()"
-snippet '^.*\)/' "() frac" wrA
-`!p
-stripped = match.string[:-1]
-depth = 0
-i = len(stripped) - 1
-while True:
-	if stripped[i] == ')': depth += 1
-	if stripped[i] == '(': depth -= 1
-	if depth == 0: break;
-	i-=1
-snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
-`{$1}$0
 endsnippet
 
 context "math()"
