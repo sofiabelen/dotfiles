@@ -1,5 +1,6 @@
 #!/bin/bash
 
-wal -i $1 
+#wal -i $1 
+#zth
 betterlockscreen -u $1 
-zth
+feh --bg-scale $1

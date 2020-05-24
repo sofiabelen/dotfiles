@@ -21,6 +21,7 @@ bindsym $mod+c exec feh -F ~/Pictures/Wallpapers/black.jpg & xdotool mousemove 1
 bindsym Mod1+g exec gimp
 bindsym Mod1+p exec qutebrowser http://print.mipt.ru/#
 
+
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -144,9 +145,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym --release Print exec "scrot ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 
 #fuck brighness... this toggles blugon - a blue light filter
-exec_always blugon
-bindsym XF86MonBrightnessUp exec blugon --setcurrent="+600" # light -A 5
-bindsym XF86MonBrightnessDown exec  blugon --setcurrent="-600" #light -U 5
+#exec_always blugon
+#bindsym XF86MonBrightnessUp exec blugon --setcurrent="+600" # light -A 5
+#bindsym XF86MonBrightnessDown exec  blugon --setcurrent="-600" #light -U 5
 
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
 bindsym Control+Mod1+o exec gllock
@@ -156,6 +157,8 @@ exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 #exec_always --no-startup-id wal -R
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
+#exec --no-startup-id fehbg &
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 
 #disable screen saver feature
 exec_always xset s off
