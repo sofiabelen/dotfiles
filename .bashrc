@@ -53,7 +53,7 @@ fi
 
 set -o vi
 
-export PS1="[\[\033[01;35m\]qkick \[\033[01;32m\]\w\[\033[00m\]]\$ "
+export PS1="[\[\033[00;36m\]\s \W\[\033[00m\]]\$ "
 
 source ~/.shortcuts
 #pywall theme on tty
