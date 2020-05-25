@@ -1,11 +1,14 @@
 [colors]
-background = #4D4D4D
-background-alt = #d1c4e99
-foreground = #f8f8f2
-foreground-alt = #555
-primary = #8BE9FD
-secondary = #50FA7B
-alert = #FF5555
+;background = ${xrdb:color0:#222}
+background = #662f343f
+background-alt = #AA676E7D
+;foreground = ${xrdb:color7:#222}
+foreground = #f3f4f5
+foreground-alt = #676E7D
+primary = #ffffff
+secondary = #000000
+other = 676E7D
+alert = ${xrdb:color3:#222}
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -20,7 +23,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = #FF5555
+line-color = #f00
 
 border-size = 0
 border-color = #00000000
@@ -28,24 +31,21 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 2
 
-font-0 = "Fantasque Sans Mono:pixelsize=9;0"
-font-1 = "Material Icons:pixelsize=9;2"
-
-;font-0 = "Ubuntu:pixelsize=9;0"
-;font-1 = "Font Awesomee:size=11;0"
-;font-2 = "Roboto:size=11:weight=bold;2"
-;font-3 = "Noto Sans:size=11;1"
+font-0 = "Ubuntu:pixelsize=9;0"
+font-1 = "Font Awesomee:size=11;0"
+font-2 = "Roboto:size=11:weight=bold;2"
+font-3 = "Noto Sans:size=11;1"
 
 modules-left =  i3
 modules-center = time 
 modules-right = pulseaudio battery wlan ip layout date powermenu
 
 tray-position = right
-tray-padding = 2
-tray-background = #0063ff
+tray-padding = 0
+;tray-background = #0063ff
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -58,8 +58,8 @@ wm-restack = i3
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-;cursor-click = pointer
-;cursor-scroll = ns-resize
+cursor-click = pointer
+cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
@@ -112,6 +112,8 @@ label-empty-padding = 2
 
 [module/i3]
 
+strip-wsnumbers = true
+
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -127,7 +129,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
+;label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
@@ -137,7 +139,7 @@ label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
