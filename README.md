@@ -9,15 +9,17 @@ Compositor: GabrielTenma/compton-kawase-blur\
 File manager: ranger\
 Web browser: qutebrowser\
 
-<del>Pywal to change theme and wallpaper\</del>
+<del>Pywal to change theme and wallpaper\
 
-<del>Zathura colorscheme: GideonWolfe/Zathura-Pywal\</del>
+<del>Zathura colorscheme: GideonWolfe/Zathura-Pywal\
 
-<del>Qutebrowser colorscheme: jjzmajic/qutewal\</del>
+<del>Qutebrowser colorscheme: jjzmajic/qutewal\
 
 All things use the dracula colorscheme: https://draculatheme.com/
 Lockscreen: betterlockscreen\
+
 Script to generate shortcuts shamelessly stolen from: LukeSmithxyz/shortcut-sync
+
 Latex Setup: vimtex + ultisnips + zathura
 Anki for studying theorems and proofs <3
 
