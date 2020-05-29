@@ -16,10 +16,9 @@ Web browser: qutebrowser\
 <del>Qutebrowser colorscheme: jjzmajic/qutewal\</del>
 
 All things use the dracula colorscheme: https://draculatheme.com/
-Lockscreen: betterlockscreen\~
+Lockscreen: betterlockscreen\
 Script to generate shortcuts shamelessly stolen from: LukeSmithxyz/shortcut-sync
 Latex Setup: vimtex + ultisnips + zathura
-
 Anki for studying theorems and proofs <3
 
 ![Alt text](Pictures/Screenshots/ScreenAnki.png?raw=true "Screenshot")
