@@ -1,6 +1,6 @@
 # dotfiles
 
-Just a backup of my configuration files.
+Dracula all the things!
 
 OS: Arch Linux\
 WM: i3-gaps\
@@ -8,17 +8,15 @@ Terminal: termite\
 Compositor: GabrielTenma/compton-kawase-blur\
 File manager: ranger\
 Web browser: qutebrowser\
-Pywal to change theme and wallpaper\
+~~Pywal to change theme and wallpaper\
+~~Zathura colorscheme: GideonWolfe/Zathura-Pywal\
+~~Qutebrowser colorscheme: jjzmajic/qutewal\
 Lockscreen: betterlockscreen\
-Zathura colorscheme: GideonWolfe/Zathura-Pywal\
-Qutebrowser colorscheme: jjzmajic/qutewal\
 Script to generate shortcuts shamelessly stolen from: LukeSmithxyz/shortcut-sync
-
 Latex Setup: vimtex + ultisnips + zathura
 
 Anki for studying theorems and proofs <3
 
-![Alt text](Pictures/Screenshots/2019-10-13T16:28:43+03:00.png?raw=true "Screenshot")
-![Alt text](Pictures/Screenshots/2019-11-11T13:18:45+03:00.png?raw=true "Screenshot")
-![Alt text](Pictures/Screenshots/2020-01-15T01:11:53+03:00.png?raw=true "Anki1")
-![Alt text](Pictures/Screenshots/2020-01-15T21:21:22+03:00.png?raw=true "Anki2")
+![Alt text](Pictures/Screenshots/ScreenAnki.png?raw=true "Screenshot")
+![Alt text](Pictures/Screenshots/ScreenZathura.png?raw=true "Screenshot")
+![Alt text](Pictures/Screenshots/ScreenNeofetch.png?raw=true "Anki1")
