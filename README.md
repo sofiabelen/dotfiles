@@ -8,9 +8,13 @@ Terminal: termite\
 Compositor: GabrielTenma/compton-kawase-blur\
 File manager: ranger\
 Web browser: qutebrowser\
+
 <del>Pywal to change theme and wallpaper\</del>
+
 <del>Zathura colorscheme: GideonWolfe/Zathura-Pywal\</del>
+
 <del>Qutebrowser colorscheme: jjzmajic/qutewal\</del>
+
 All things use the dracula colorscheme: https://draculatheme.com/
 Lockscreen: betterlockscreen\~
 Script to generate shortcuts shamelessly stolen from: LukeSmithxyz/shortcut-sync
