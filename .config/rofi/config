@@ -280,5 +280,5 @@
 ! rofi.me-accept-custom:               Control+MouseDPrimary
 
 #rofi.font: Monospace 10
-rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+#rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 #rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
