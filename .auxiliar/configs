@@ -6,8 +6,11 @@ cfr     ~/.config/ranger/rc.conf
 cfi     ~/.config/i3/config
 cfq     ~/.config/qutebrowser/config.py
 cfm     ~/.config/mutt/muttrc
-cfp     ~/.config/polybar/config
+cfp     ~/.config/polybar/config.ini
 cft     ~/.config/termite/config
+cfk     ~/.config/sxiv/exec/key-handler
+cfx     ~/sxiv/config.h
+cfa     ~/.config/alacritty/alacritty.yml
 cfz     ~/.config/zathura/zathurarc
 cfs     ~/bin/shortcuts
 cfc     ~/.compton.conf

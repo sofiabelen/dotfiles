@@ -1,11 +1,13 @@
 h       ~/
 d       ~/Documents
+n       ~/Documents/Notes
 l       ~/Documents/Latex
 re      ~/Documents/Latex/resume
+r       ~/Documents/Resources
 lb      ~/Documents/Lab2
 hl      ~/Documents/HomeLabs
 th      ~/Documents/Latex/Theorems
-cl      ~/Documents/Lab2/lab2.1.4
+cl      ~/Documents/Lab2/selfD
 bl      ~/Documents/sofiabelen.github.io
 sc      ~/Documents/Scripting
 cpp     ~/Documents/cpp
@@ -15,6 +17,5 @@ vf      ~/Documents/Computational_Physics
 w       ~/Pictures/Wallpapers
 p       ~/Pictures
 s       ~/Pictures/MyScreenshots
-r       ~/Documents/Russian
 u       ~/Downloads
 c       ~/.config
