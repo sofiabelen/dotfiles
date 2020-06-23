@@ -1,0 +1,238 @@
+html { overflow: scroll; overflow-x: hidden; }
+/* CONTAINER FOR YOUR CARDS */
+
+/* APPLIES TO THE WHOLE CARD */
+
+/* STYLE FOR CLOZE DELETIONS */
+.night_mode .cloze, .cloze b, .cloze u, .cloze i { 
+font-family: Menlo, baskerville, sans;
+font-size: 18px; /* FONT SIZE */
+line-height: 1.6em;
+color: MediumSeaGreen !important;}
+
+/* STYLE FOR EXTRA PORTION ON BACK OF CARD */
+#extra, #extra i { font-size: 15px; color:#D7DEE9; font-style: italic; }
+
+/* STYLE TAGS TO APPEAR WHEN HOVERING OVER TOP OF CARD */
+.tags { 
+    color: #A6ABB9;
+    opacity: 0;
+    font-size: 10px; 
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase; 
+    position: fixed; 
+    padding: 0; 
+    top:0;  
+    right: 0;}
+.tags:hover { opacity: 1; position: fixed;}
+
+/* IMAGE STYLE */
+img { display: block; max-width: 100%; max-height: none; margin-left: auto; margin: 10px auto 10px auto;}
+tr {font-size: 12px; }
+
+/* COLOR ACCENTS FOR BOLD-ITALICS-UNDERLINE */
+b { color: #C695C6 !important; } /* BOLD STYLE */
+u { text-decoration: none; color: #5EB3B3;} /* UNDERLINE STYLE */
+i  { color: IndianRed; } /* ITALICS STYLE */
+a { color: LightGray !important; text-decoration: none; font-size: 10px; font-style: normal; } /* LINK STYLE */
+
+/* ADJUSTMENT FOR MOBILE DEVICES */
+.mobile .card { color: #D7DEE9; background-color: #333B45; } 
+.mobile .tags:hover { opacity: 1; position: relative;}
+
+.card {
+    font-family: Menlo, baskerville, sans;
+    font-size: 18px; /* FONT SIZE */
+    text-align: left; /* ALIGN TEXT */
+    color: #F8F8F2; /* FONT COLOR */
+    line-height: 1.6em;
+    background-color: #272822; /* BACKGROUND COLOR */
+}
+   
+.other-info .reading {
+ visibility: hidden;
+ margin-bottom: -3px;
+ color: white;
+ font-size: 0.7em;
+ background: rgba(0,0,0,0.3);
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+ padding: 5px;
+ z-index: -1;
+}
+
+.other-info .show {
+  visibility: visible;
+}
+
+
+.term-front {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 10px;
+    background-color: #262626;
+    background: #262626;
+    max-width: 700px; /* CHANGE CARD SIZE HERE */
+    margin: 0 auto; /*CENTERS THE CARD IN THE MIDDLE OF THE WINDOW */
+}
+
+.term{
+    position: relative;
+    background: #413454;
+    border-radius: 8px;
+    padding: 20px 10px;
+}
+
+.term-flip {
+ border-bottom-right-radius: 8px;
+ border-bottom-left-radius: 8px;
+ padding: 10px;
+ color: black;
+ background-color: white;
+}
+
+hr {
+ /*visibility: hidden*/
+ display: none;
+}
+
+.answer {
+ text-align: center;
+ padding: 20px;
+ border: 3px solid white;
+ border-top: 0;
+ border-bottom-right-radius: 8px;
+ border-bottom-left-radius: 8px;
+ background: white;
+ color: black;
+}
+
+.answer-flip {
+ font-size: 1.5em;
+ text-align: center;
+ padding: 20px;
+ border: 3px solid none;
+ border-top: 0;
+ border-top-right-radius: 8px;
+ border-top-left-radius: 8px;
+ background: rgba(0, 0, 0, 0.8);
+ color: white;
+ box-shadow: 0px -2px 5px grey;
+}
+
+/* Hint Prompter*/
+
+.hint-btn{
+ visibility: hidden;
+ display: flex;
+ padding: 5px;
+ justify-content: center;
+ align-content: center;
+ color: black;
+ border-bottom-right-radius: 8px;
+ border-bottom-left-radius: 8px;
+ margin-top: -20px;
+ padding-top: 20px;
+}
+
+.hint-btn .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.prompt {
+ cursor: pointer;
+ background: rgba(0,0,0,0.3);
+ font-weight: bold;
+ color: white;
+ padding: 0px 10px;
+ border-bottom-right-radius: 5px;
+ border-bottom-left-radius: 5px;
+}
+
+.prompt:hover{
+ background: red;
+ transition: 5s;
+}
+
+.no-hint{
+ cursor: auto;
+}
+
+.actual-hint{
+ visibility: hidden;
+}
+
+.actual-hint .show{
+ visibility: visible;
+ color: black;
+ background: white;
+ padding: 10px 5px;
+ border-radius: 8px;
+}
+
+.info {
+ color: black;
+ background: white;
+ margin-top: -5px;
+ padding: 5px 10px;
+ border-bottom-right-radius: 8px;
+ border-bottom-left-radius: 8px;
+}
+
+/* Night Mode */
+
+.nightMode .term{
+ color: white;
+ background: black;
+}
+
+.nightMode .term-front{
+ color: black;
+ background: white;
+}
+
+.nightMode .term-flip {
+ color: white;
+ background: black;
+}
+
+.nightMode .info {
+ color: white;
+ background: black;
+}
+
+.nightMode .answer{
+ color: white;
+ background: black;
+ border: 3px solid black;
+}
+
+.nightMode .answer-flip {
+ color: black;
+ background: white;
+ border: 3px solid white;
+}
+
+.nightMode .no-hint {
+ color: white;
+}
+
+.nightMode .actual-hint .show{
+ color: white;
+ background: black;
+}
+
+/* Mobile */
+@media only screen and (max-device-width: 480px) {
+  .card{
+    margin: 0px;
+    background: white;
+  }
+}

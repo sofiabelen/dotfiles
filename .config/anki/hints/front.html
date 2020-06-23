@@ -1,11 +1,30 @@
-<div class = 'term-front'>{{cloze:Text}}</div>
-<div class= "info">{{Hint}}</div>
-<div class= "info">{{Extra}}</div>
-
+<div class= "other-info" onmouseover="popUp(); popDown()" onmouseout="popUp(); popDown()">
+    <div class = 'term-front'>{{cloze:Text}}</div>
+    </div>
+    
+    <div class="hint-btn" onmouseover="popDown()" onmouseout="popDown()">
+    <div id="hint-text">
+    <div class ="prompt" onclick="showHint()">{{#Hint}}HINT{{/Hint}}</div>
+    <div class ="no-hint">{{^Hint}}<br>There are no hints 👍{{/Hint}}</div>
+    </div>
+</div>
+    
+<div class="actual-hint"><div id="hint">{{Hint}}</div></div>
+    
 <script>
 function popUp(){
-    let popup = document.getElementById("subdeck");
+    let popup = document.getElementById('subdeck');
     popup.classList.toggle("show");
+}
+
+function popDown(){
+    let popdown = document.getElementById('hint-text');
+    popdown.classList.toggle("show");
+}
+
+function showHint(){
+    let hint = document.getElementById('hint');
+    hint.classList.toggle("show");
 }
 </script>
 

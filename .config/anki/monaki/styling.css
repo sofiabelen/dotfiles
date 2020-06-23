@@ -1,0 +1,66 @@
+html { overflow: scroll; overflow-x: hidden; }
+/* CONTAINER FOR YOUR CARDS */
+#kard {
+    padding: 0px 0px;
+    max-width: 700px; /* CHANGE CARD SIZE HERE */
+    margin: 0 auto; /*CENTERS THE CARD IN THE MIDDLE OF THE WINDOW */
+}
+
+/* APPLIES TO THE WHOLE CARD */
+.card {
+    font-family: Menlo, baskerville, sans;
+    font-size: 18px; /* FONT SIZE */
+    text-align: left; /* ALIGN TEXT */
+    color: #F8F8F2; /* FONT COLOR */
+    line-height: 1.6em;
+    background-color: #272822; /* BACKGROUND COLOR */
+}
+.card.nightMode {
+    font-family: Menlo, baskerville, sans;
+    font-size: 18px; /* FONT SIZE */
+    text-align: left; /* ALIGN TEXT */
+    color: #F8F8F2; /* FONT COLOR */
+    line-height: 1.6em;
+    background-color: #272822; /* BACKGROUND COLOR */
+}
+/* STYLE FOR CLOZE DELETIONS */
+    .night_mode .cloze, .cloze b, .cloze u, .cloze i { 
+    font-family: Menlo, baskerville, sans;
+    font-size: 18px; /* FONT SIZE */
+    line-height: 1.6em;
+    color: #66D9EF !important;
+}
+
+/* STYLE FOR EXTRA PORTION ON BACK OF CARD */
+/* .night_mode .extra { font-size: 15px; color:#BD93F9;}*/
+
+/* STYLE TAGS TO APPEAR WHEN HOVERING OVER TOP OF CARD */
+.tags { 
+    color: #A6ABB9;
+    opacity: 0;
+    font-size: 10px; 
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase; 
+    position: fixed; 
+    padding: 0; 
+    top:0;  
+    right: 0;}
+.tags:hover { opacity: 1; position: fixed;}
+
+/* IMAGE STYLE */
+img { display: block; max-width: 100%; max-height: none; margin-left: auto; margin: 10px auto 10px auto;}
+tr {font-size: 12px; }
+
+/* COLOR ACCENTS FOR BOLD-ITALICS-UNDERLINE */
+/* BOLD STYLE */
+b { color: #F92672; !important; } 
+/* UNDERLINE STYLE */
+u { text-decoration: none; color: #AE81FF;} 
+/* ITALICS STYLE */
+i  { color: #A6E22E; } 
+a { color: LightGray !important; text-decoration: none; font-size: 10px; font-style: normal; } /* LINK STYLE */
+
+/* ADJUSTMENT FOR MOBILE DEVICES */
+.mobile .card { color: #F8F8F2; background-color: #272822; } 
+.mobile .tags:hover { opacity: 1; position: relative;}

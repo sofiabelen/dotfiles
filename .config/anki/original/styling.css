@@ -11,28 +11,19 @@ html { overflow: scroll; overflow-x: hidden; }
     font-family: Menlo, baskerville, sans;
     font-size: 18px; /* FONT SIZE */
     text-align: left; /* ALIGN TEXT */
-    color: #F8F8F2; /* FONT COLOR */
+    color: #D7DEE9; /* FONT COLOR */
     line-height: 1.6em;
-    background-color: #262626; /* BACKGROUND COLOR */
-}
-.card.nightMode {
-    font-family: Menlo, baskerville, sans;
-    font-size: 18px; /* FONT SIZE */
-    text-align: left; /* ALIGN TEXT */
-    color: #F8F8F2; /* FONT COLOR */
-    line-height: 1.6em;
-    background-color: #262626; /* BACKGROUND COLOR */
+    background-color: #333B45; /* BACKGROUND COLOR */
 }
 /* STYLE FOR CLOZE DELETIONS */
-    .night_mode .cloze, .cloze b, .cloze u, .cloze i { 
-    font-family: Menlo, baskerville, sans;
-    font-size: 18px; /* FONT SIZE */
-    line-height: 1.6em;
-    color: #50FA7B !important;
-}
+.night_mode .cloze, .cloze b, .cloze u, .cloze i { 
+font-family: Menlo, baskerville, sans;
+font-size: 18px; /* FONT SIZE */
+line-height: 1.6em;
+color: MediumSeaGreen !important;}
 
 /* STYLE FOR EXTRA PORTION ON BACK OF CARD */
-/* .night_mode .extra { font-size: 15px; color:#BD93F9;}*/
+#extra, #extra i { font-size: 15px; color:#D7DEE9; font-style: italic; }
 
 /* STYLE TAGS TO APPEAR WHEN HOVERING OVER TOP OF CARD */
 .tags { 
@@ -53,14 +44,11 @@ img { display: block; max-width: 100%; max-height: none; margin-left: auto; marg
 tr {font-size: 12px; }
 
 /* COLOR ACCENTS FOR BOLD-ITALICS-UNDERLINE */
-/* BOLD STYLE */
-b { color: #FF92D0; !important; } 
-/* UNDERLINE STYLE */
-u { text-decoration: none; color: #8BE9FD;} 
-/* ITALICS STYLE */
-i  { color: #F1FA8C; } 
+b { color: #C695C6 !important; } /* BOLD STYLE */
+u { text-decoration: none; color: #5EB3B3;} /* UNDERLINE STYLE */
+i  { color: IndianRed; } /* ITALICS STYLE */
 a { color: LightGray !important; text-decoration: none; font-size: 10px; font-style: normal; } /* LINK STYLE */
 
 /* ADJUSTMENT FOR MOBILE DEVICES */
-.mobile .card { color: #F8F8F2; background-color: #262626; } 
+.mobile .card { color: #D7DEE9; background-color: #333B45; } 
 .mobile .tags:hover { opacity: 1; position: relative;}
