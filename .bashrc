@@ -20,9 +20,10 @@ alias ls='ls --color=auto'
 alias vi='vim'
 alias vtx='vim --servername VIM'
 alias config='/usr/bin/git --git-dir=/home/sofia/.cfg/ --work-tree=/home/sofia'
-alias sd='sudo shutdown now'
+alias zathura="devour zathura"
+alias sxiv="devour sxiv"
+alias wl="sxiv -t ~/Pictures/Wallpapers/*"
 
-#
 # # ex - archive extractor
 # # usage: ex <file>
 ex ()
