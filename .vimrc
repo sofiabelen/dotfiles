@@ -14,6 +14,7 @@ Plugin 'SirVer/ultisnips'
 "Plugin 'dylanaraps/wal.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'crusoexia/vim-dracula'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 "colorscheme wal
@@ -54,6 +55,9 @@ aug end
 
 "enable autocompletion
 set wildmode=longest,list,full
+
+" Enable folding according to syntax
+:set foldmethod=syntax
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -115,3 +119,10 @@ map <leader>i :setlocal spell! spelllang=en_us<CR>
 map <leader>o :setlocal spell! spelllang=es<CR>
 map <leader>p :setlocal spell! spelllang=ru<CR>
 map <leader>f :NERDTreeToggle<CR>
+
+" Insert newline without entering insert mode
+nmap <C-i> O<Esc>j
+nmap <C-o> o<Esc>k
+
+" Clear search highlight
+nnoremap ns :noh<cr>
