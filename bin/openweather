@@ -1,0 +1,3 @@
+#!/bin/bash
+
+busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data

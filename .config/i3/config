@@ -1,27 +1,32 @@
 set $mod Mod4
 set $terminal alacritty
 set $browser qutebrowser
+set $terminal2 termite
 
 font pango: Ubuntu 8
 
 floating_modifier $mod
 
 bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+Return exec $terminal2
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run 
 bindsym Mod1+b exec $browser
 bindsym Mod1+f exec firefox
+bindsym Mod1+o exec opera
 bindsym Mod1+r exec $terminal -e runranger
-bindsym Mod1+m exec $terminal -e runmutt
+bindsym Mod1+m exec $terminal -e vifm
 bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
 bindsym Mod1+Shift+w exec firefox https://web.whatsapp.com/
 bindsym Mod1+w exec sxiv -bt ~/Pictures/Wallpapers/*
 bindsym Mod1+a exec anki
-bindsym $mod+u exec xdotool mousemove 0 1500
+bindsym Mod1+n exec notion-app
+bindsym $mod+u exec xdotool mousemove 50 1500
 bindsym $mod+c exec feh -F ~/Pictures/Wallpapers/black.jpg & xdotool mousemove 1500 1500 
 bindsym Mod1+g exec gimp
 bindsym Mod1+q exec qutebrowser
 bindsym Mod1+p exec qutebrowser http://print.mipt.ru/#
+bindsym Mod1+v exec code
 
 
 bindsym $mod+h focus left
@@ -176,6 +181,7 @@ client.background       $bg
 exec_always start-pulseaudio-x11
 bindsym XF86AudioRaiseVolume exec --no-startup-id vol_up
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioMicMute exec --no-startup-id vp
 
 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
@@ -199,6 +205,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec --no-startup-id ~/.fehbg &
 #exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec_always --no-startup-id ntfd &
 
 #disable screen saver feature
 exec_always xset s off
@@ -222,8 +229,8 @@ default_floating_border none
 #bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
 
 bindsym Mod1+0 exec zathura ~/Documents/second_semester/Dennis_Rapaport-The_Art_of_Molecular_Dynamics_Simulation-EN.pdf
-bindsym Mod1+2 exec zathura ~/Documents/second_semester/Linear_Alg2020.pdf
-bindsym Mod1+3 exec zathura ~/Documents/second_semester/ЛА_2020.pdf
-bindsym Mod1+4 exec zathura ~/Documents/second_semester/panov-linalg.pdf
-bindsym Mod1+5 exec zathura ~/Documents/Reads/red_queen.pdf
-bindsym Mod1+6 exec zathura ~/Downloads/ЛА_2020.pdf
+bindsym Mod1+2 exec zathura ~/Documents/Resources/omp-hands-on-SC08.pdf
+bindsym Mod1+3 exec zathura ~/Documents/Resources/ModernC++.pdf
+bindsym Mod1+4 exec zathura ~/Documents/Resources/UsingOpenMP.pdf
+bindsym Mod1+5 exec zathura ~/Documents/Resources/ParallelScientificComputinginC++andMPI.pdf
+bindsym Mod1+9 exec zathura ~/Documents/Reads/red_queen.pdf
