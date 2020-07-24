@@ -14,8 +14,10 @@ bindsym $mod+d exec rofi -show run
 bindsym Mod1+b exec $browser
 bindsym Mod1+f exec firefox
 bindsym Mod1+o exec opera
-bindsym Mod1+r exec $terminal -e runranger
 bindsym Mod1+m exec $terminal -e vifm
+bindsym Mod1+u exec $terminal -e ncmpcpp
+bindsym Mod1+p exec $terminal -e htop
+bindsym Mod1+r exec $terminal -e ranger
 bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
 bindsym Mod1+Shift+w exec firefox https://web.whatsapp.com/
 bindsym Mod1+w exec sxiv -bt ~/Pictures/Wallpapers/*
@@ -25,7 +27,6 @@ bindsym $mod+u exec xdotool mousemove 50 1500
 bindsym $mod+c exec feh -F ~/Pictures/Wallpapers/black.jpg & xdotool mousemove 1500 1500 
 bindsym Mod1+g exec gimp
 bindsym Mod1+q exec qutebrowser
-bindsym Mod1+p exec qutebrowser http://print.mipt.ru/#
 bindsym Mod1+v exec code
 
 
@@ -76,16 +77,16 @@ set $ws10 10
 #Display snippets from: https://gist.github.com/fd0/6951577
 
 # assign workspaces to screens
-#workspace $ws1 output eDP-1
-#workspace $ws2 output eDP-1
-#workspace $ws3 output eDP-1
-#workspace $ws4 output eDP-1
-#workspace $ws5 output eDP-1
-#workspace $ws6 output HDMI-1
-#workspace $ws7 output HDMI-1
-#workspace $ws8 output HDMI-1
-#workspace $ws9 output HDMI-1
-#workspace $ws10 output HDMI-1
+workspace $ws1 output eDP-1
+workspace $ws2 output eDP-1
+workspace $ws3 output eDP-1
+workspace $ws4 output eDP-1
+workspace $ws5 output eDP-1
+workspace $ws6 output HDMI-1
+workspace $ws7 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+workspace $ws10 output HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -159,22 +160,20 @@ bindsym Control+l resize grow width 7 px or 7 ppt
 
 bindsym $mod+n exec --no-startup-id flash_window
 
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $fg-inactive i3wm.color10 #f0f0f0
-set_from_resource $bg i3wm.color0 #f0f0f0
-set_from_resource $urgent i3wm.color8 #f0f0f0
+set $fg #F8F8F2
+set $fg-inactive #F8F8F2
+set $bg #262626
+set $active #9AEDFE
+set $inactive #4D4D4D
+set $urgent #FF6E67
+set $indicator #CAA9FA
 
-# class                 border          backgr.         text            indicator child_border
-client.focused          $bg             $bg             $fg             $bg       $bg
-client.focused_inactive $bg             $bg             $fg-inactive    $bg       $bg
-client.unfocused        $bg             $bg             $fg-inactive    $bg       $bg
-client.urgent           $urgent         $urgent         $fg             $bg       $bg
-client.placeholder      $bg             $bg             $fg             $bg       $bg
+# class                 border          backgr.    text            indicator   child_border
+client.focused          $bg             $bg        $fg             $indicator  $active
+client.focused_inactive $bg             $bg        $fg-inactive    $indicator  $inactive
+client.unfocused        $bg             $bg        $fg-inactive    $indicator  $inactive
+client.urgent           $bg             $bg        $fg             $indicator  $urgent
+client.placeholder      $bg             $bg        $fg             $indicator  $inactive
 
 client.background       $bg
 
@@ -188,20 +187,15 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 bindsym --release Print exec "scrot ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 
-#fuck brighness... this toggles blugon - a blue light filter
-#exec_always blugon
 bindsym XF86MonBrightnessUp exec light -A 5
-#blugon --setcurrent="+600"
 bindsym XF86MonBrightnessDown exec light -U 5
-#  blugon --setcurrent="-600"
 
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
 bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
-exec_always compton --config ~/.compton.conf
+# exec_always compton --config ~/.compton.conf
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
-#exec_always --no-startup-id wal -R
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec --no-startup-id ~/.fehbg &
 #exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
@@ -215,13 +209,16 @@ exec_always xset -dpms
 gaps inner 6
 gaps outer 1
 smart_gaps on
+hide_edge_borders smart_no_gaps
 
 bindsym $mod+i gaps inner all set 0; gaps outer all set 0
 bindsym $mod+o gaps inner all set 6; gaps outer all set 1
 
-hide_edge_borders both 
-default_border none
-default_floating_border none
+default_border pixel 2
+
+# hide_edge_borders both 
+# default_border none
+# default_floating_border none
 
 #bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
 #bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
