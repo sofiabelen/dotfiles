@@ -14,4 +14,5 @@ cfa     ~/.config/alacritty/alacritty.yml
 cfz     ~/.config/zathura/zathurarc
 cfs     ~/bin/shortcuts
 cfc     ~/.compton.conf
+cfy     ~/.ipython/profile_default/ipython_config.py
 bi      ~/Documents/Latex/uni.bib
