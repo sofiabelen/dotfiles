@@ -1473,7 +1473,7 @@ c.backend = 'webengine'
 ## Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 ## for a blank page.
 ## Type: FuzzyUrl
-c.url.default_page = 'https://www.shortcutfoo.com/app/dojos/qutebrowser/cheatsheet'
+c.url.default_page = 'https://sofiabelen.github.io/startpage/'
 ## URL segments where `:navigate increment/decrement` will search for a
 ## number.
 ## Type: FlagList
@@ -1513,7 +1513,7 @@ c.url.searchengines["ct"] = "https://context.reverso.net/translation/russian-eng
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['https://www.google.com/']
+c.url.start_pages = ['https://sofiabelen.github.io/startpage/']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
