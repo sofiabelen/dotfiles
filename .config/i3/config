@@ -18,13 +18,12 @@ bindsym Mod1+m exec $terminal -e vifm
 bindsym Mod1+u exec $terminal -e ncmpcpp
 bindsym Mod1+p exec $terminal -e htop
 bindsym Mod1+r exec $terminal -e ranger
-bindsym Mod1+t exec surf -I https://translate.yandex.com/?lang=en-ru
-bindsym Mod1+Shift+w exec firefox https://web.whatsapp.com/
+bindsym Mod1+t exec qutebrowser ':open -w https://translate.yandex.com/?lang=en-ru'
+bindsym Mod1+Shift+w exec ':open -w https://web.whatsapp.com/'
 bindsym Mod1+w exec sxiv -bt ~/Pictures/Wallpapers/*
 bindsym Mod1+a exec anki
 bindsym Mod1+n exec notion-app
 bindsym $mod+u exec xdotool mousemove 50 1500
-bindsym $mod+c exec feh -F ~/Pictures/Wallpapers/black.jpg & xdotool mousemove 1500 1500 
 bindsym Mod1+g exec gimp
 bindsym Mod1+q exec qutebrowser
 bindsym Mod1+v exec code
@@ -187,19 +186,22 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 bindsym --release Print exec "scrot ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 
+bindsym --release Shift+Print exec "scrot -s ~/Pictures/MyScreenshots/Electromagnetism/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
+
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
+# exec_always compton --config ~/.compton.conf
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
 bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
-# exec_always compton --config ~/.compton.conf
 exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec --no-startup-id ~/.fehbg &
 #exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec_always --no-startup-id ntfd &
+exec_always --no-startup-id unclutter &
 
 #disable screen saver feature
 exec_always xset s off
