@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dir=".local/share/Anki2/User\ 1/collection.media/"
+name=$(date --iso-8601='seconds' | sed 's/://g').png
+
+scrot -s -q 100 "$dir$name" && echo $name | tr -d '\n' | xclip -selection clipboard

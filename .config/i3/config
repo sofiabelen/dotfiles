@@ -184,9 +184,9 @@ bindsym XF86AudioMicMute exec --no-startup-id vp
 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym --release Print exec "scrot ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
-
-bindsym --release Shift+Print exec "scrot -s ~/Pictures/MyScreenshots/Electromagnetism/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Print exec "scrot -q 100 ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Control+Print exec "scrot -s -q 100 ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Shift+Print exec anki-screenshot
 
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
