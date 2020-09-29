@@ -6,5 +6,60 @@
 
 config_version: 2
 settings:
+  bindings.commands:
+    global:
+      normal:
+        ;bl: set downloads.location.directory ~/Documents/sofiabelen.github.io ;;
+          hint links download
+        ;c: set downloads.location.directory ~/.config ;; hint links download
+        ;cf: set downloads.location.directory ~/Documents/CFD-Barba ;; hint links
+          download
+        ;cl: set downloads.location.directory ~/Documents/Lab2/selfD ;; hint links
+          download
+        ;cpp: set downloads.location.directory ~/Documents/cpp ;; hint links download
+        ;d: set downloads.location.directory ~/Documents ;; hint links download
+        ;h: set downloads.location.directory ~/ ;; hint links download
+        ;hl: set downloads.location.directory ~/Documents/HomeLabs ;; hint links download
+        ;i: set downloads.location.directory ~/Documents/Informatics ;; hint links
+          download
+        ;l: set downloads.location.directory ~/Documents/Latex ;; hint links download
+        ;lb: set downloads.location.directory ~/Documents/Lab2 ;; hint links download
+        ;lj: set downloads.location.directory ~/Documents/Lennard-Jones ;; hint links
+          download
+        ;m: set downloads.location.directory ~/Music ;; hint links download
+        ;n: set downloads.location.directory ~/Documents/Notes ;; hint links download
+        ;p: set downloads.location.directory ~/Pictures ;; hint links download
+        ;pp: set downloads.location.directory ~/Documents/ParallelProgramming ;; hint
+          links download
+        ;py: set downloads.location.directory ~/Documents/Python-Data-Analysis ;;
+          hint links download
+        ;r: set downloads.location.directory ~/Documents/Resources ;; hint links download
+        ;re: set downloads.location.directory ~/Documents/Latex/resume ;; hint links
+          download
+        ;s: set downloads.location.directory ~/Pictures/MyScreenshots ;; hint links
+          download
+        ;sc: set downloads.location.directory ~/Documents/Scripting ;; hint links
+          download
+        ;sns: set downloads.location.directory ~/Documents/Python-Data-Analysis/Seaborn
+          ;; hint links download
+        ;ss: set downloads.location.directory ~/Documents/second_semester ;; hint
+          links download
+        ;th: set downloads.location.directory ~/Documents/Latex/Theorems ;; hint links
+          download
+        ;u: set downloads.location.directory ~/Downloads ;; hint links download
+        ;w: set downloads.location.directory ~/Pictures/Wallpapers ;; hint links download
+        W: hint links run :open -w {hint-url}
+        xb: config-cycle statusbar.hide
+  content.geolocation:
+    https://openweathermap.org: true
+  content.media_capture:
+    https://discord.com: true
   content.notifications:
-    http://print.mipt.ru: false
+    http://print.mipt.ru: true
+    https://pomodoro-tracker.com: true
+    https://www.reddit.com: true
+    https://www.wildberries.ru: false
+  downloads.location.directory:
+    global: ~/Documents
+  statusbar.show:
+    global: always

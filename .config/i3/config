@@ -157,15 +157,15 @@ bindsym Control+j resize grow height 7 px or 7 ppt
 bindsym Control+k resize shrink height 7 px or 7 ppt
 bindsym Control+l resize grow width 7 px or 7 ppt
 
-bindsym $mod+n exec --no-startup-id flash_window
+# bindsym $mod+n exec --no-startup-id flash_window
 
 set $fg #F8F8F2
 set $fg-inactive #F8F8F2
 set $bg #262626
-set $active #9AEDFE
-set $inactive #4D4D4D
-set $urgent #FF6E67
-set $indicator #CAA9FA
+set $active #88c0d0
+set $inactive #4c566a
+set $urgent #bf616a
+set $indicator #b48ead
 
 # class                 border          backgr.    text            indicator   child_border
 client.focused          $bg             $bg        $fg             $indicator  $active
@@ -191,11 +191,11 @@ bindsym --release Shift+Print exec anki-screenshot
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
-# exec_always compton --config ~/.compton.conf
+exec_always picom --config ~/.picom.conf
 bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
 bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
-exec_always --no-startup-id flashfocus
+# exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec --no-startup-id ~/.fehbg &

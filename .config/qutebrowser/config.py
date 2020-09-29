@@ -1870,14 +1870,15 @@ config.bind('xb', 'config-cycle statusbar.hide')
 #config.source('qutewal.py')
 config.source('shortcuts.py')
 
-import dracula.draw
-
 # Load existing settings made via :set
 config.load_autoconfig()
 
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    }
-})
+# import dracula.draw
+# dracula.draw.blood(c, {
+#     'spacing': {
+#         'vertical': 6,
+#         'horizontal': 8
+#     }
+# })
+
+config.source('nord-qutebrowser.py')

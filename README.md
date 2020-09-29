@@ -1,6 +1,11 @@
 # dotfiles
 
-Dracula all the things!
+## Nord Colorscheme
+
+![Alt text](Pictures/Screenshots/nord1.png?raw=true)
+![Alt text](Pictures/Screenshots/nord2.png?raw=true)
+
+## Dracula Colorscheme
 
 ![Alt text](Pictures/Screenshots/ScreenPacwall.png?raw=true "Anki1")
 ![Alt text](Pictures/Screenshots/ScreenAnki.png?raw=true "Screenshot")
