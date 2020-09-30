@@ -316,7 +316,7 @@ c.colors.tabs.odd.fg = nord['nord5']
 
 # ## Background color of selected even tabs.
 # ## Type: QtColor
-c.colors.tabs.selected.even.bg = nord['nord0']
+c.colors.tabs.selected.even.bg = nord['nord15']
 
 # ## Foreground color of selected even tabs.
 # ## Type: QtColor
@@ -324,7 +324,7 @@ c.colors.tabs.selected.even.fg = nord['nord5']
 
 # ## Background color of selected odd tabs.
 # ## Type: QtColor
-c.colors.tabs.selected.odd.bg = nord['nord0']
+c.colors.tabs.selected.odd.bg = nord['nord15']
 
 # ## Foreground color of selected odd tabs.
 # ## Type: QtColor
