@@ -1,54 +1,39 @@
-# Dracula color theme for Zathura
-# link:( https://github.com/dracula/dracula-theme#color-palette )
-# Swaps Foreground for Background to get a light version
-# Comment after the color is the color's name, as it appears in the palette
+# Base16 Nord
+# Author: arcticicestudio
 
+set default-bg                  "#2E3440"
+set default-fg                  "#3B4252"
 
-# Light/Default mode settings:
-# 
-#
-set notification-error-bg       "#ff5555" # Red
-set notification-error-fg       "#f8f8f2" # Foreground
-set notification-warning-bg     "#ffb86c" # Orange
-set notification-warning-fg     "#44475a" # Selection
-set notification-bg             "#262626" # Background
-set notification-fg             "#f8f8f2" # Foreground
+set statusbar-fg                "#D8DEE9"
+set statusbar-bg                "#434C5E"
 
-set completion-bg               "#262626" # Background
-set completion-fg               "#6272a4" # Comment
-set completion-group-bg         "#262626" # Background
-set completion-group-fg         "#6272a4" # Comment
-set completion-highlight-bg     "#44475a" # Selection
-set completion-highlight-fg     "#f8f8f2" # Foreground
+set inputbar-bg                 "#2E3440"
+set inputbar-fg                 "#8FBCBB"
 
-set index-bg                    "#262626" # Background
-set index-fg                    "#f8f8f2" # Foreground
-set index-active-bg             "#44475a" # Current Line
-set index-active-fg             "#f8f8f2" # Foreground
+set notification-bg             "#2E3440"
+set notification-fg             "#8FBCBB"
 
-set inputbar-bg                 "#262626" # Background
-set inputbar-fg                 "#f8f8f2" # Foreground
-set statusbar-bg                "#282A36" # Background
-set statusbar-fg                "#f8f8f2" # Foreground
+set notification-error-bg       "#2E3440"
+set notification-error-fg       "#BF616A"
 
-set highlight-color             "#ffb86c" # Orange
-set highlight-active-color      "#ff79c6" # Pink
+set notification-warning-bg     "#2E3440"
+set notification-warning-fg     "#BF616A"
 
-set default-bg                  "#262626" # Background
-set default-fg                  "#f8f8f2" # Foreground
+set highlight-color             "#EBCB8B"
+set highlight-active-color      "#81A1C1"
 
-set render-loading              true
-set render-loading-fg           "#262626" # Background
-set render-loading-bg           "#f8f8f2" # Foreground
+set completion-bg               "#3B4252"
+set completion-fg               "#81A1C1"
 
-# Recolor mode settings
-#
-#
+set completion-highlight-fg     "#8FBCBB"
+set completion-highlight-bg     "#81A1C1"
 
-set recolor-lightcolor          "#282A36" # Background
-set recolor-lightcolor          "#262626" # Background
-set recolor-darkcolor           "#f8f8f2" # Foreground
-#set recolor
+set recolor-lightcolor          "#2E3440"
+set recolor-darkcolor           "#ECEFF4"
+
+set recolor                     "false"
+set recolor-keephue             "false"
+set recolor
 set smooth-scroll true
 set window-title-home-tilde true
 set statusbar-basename true

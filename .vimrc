@@ -13,12 +13,18 @@ Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/nerdtree'
 Plugin 'crusoexia/vim-dracula'
+Plugin 'arcticicestudio/nord-vim'
 Plugin 'tpope/vim-fugitive'
+"Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
-let g:dracula_colorterm = 0
-colorscheme dracula
+colorscheme nord
+
+" let g:dracula_italic = 0
+" colorscheme dracula
+
+hi Normal guibg=NONE ctermbg=NONE
 
 filetype plugin indent on
 syntax on
@@ -120,6 +126,8 @@ map <leader>o :setlocal spell! spelllang=es<CR>
 map <leader>p :setlocal spell! spelllang=ru<CR>
 map <leader>f :NERDTreeToggle<CR>
 
+inoremap <C-n> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 " Insert newline without entering insert mode
 nmap <C-i> O<Esc>j
 nmap <C-o> o<Esc>k
@@ -177,3 +185,14 @@ nnoremap tt :noh<cr>
 " 
 " let pyindent_nested_paren="&sw*2"
 " let pyindent_open_paren="&sw*2"
+
+" Python inside latex, never worked too well
+" function! PythonTexCompile()
+"     silent !clear
+"     call vimtex#compiler#compile_ss()
+"     execute '!pythontex' fnameescape(b:vimtex.tex)
+"     call vimtex#compiler#compile_ss()
+" endfunction
+" nnoremap <C-p> :call PythonTexCompile() <CR>
+
+hi Normal guibg=NONE ctermbg=NONE

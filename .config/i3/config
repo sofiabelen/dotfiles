@@ -162,8 +162,8 @@ bindsym Control+l resize grow width 7 px or 7 ppt
 set $fg #F8F8F2
 set $fg-inactive #F8F8F2
 set $bg #262626
-set $active #88c0d0
-set $inactive #4c566a
+set $active #f0fcff
+set $inactive #3b4252
 set $urgent #bf616a
 set $indicator #b48ead
 

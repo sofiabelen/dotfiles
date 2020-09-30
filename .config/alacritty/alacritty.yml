@@ -11,7 +11,7 @@
 colors:
   primary:
     background: '#2e3440'
-    foreground: '#d8dee9'
+    foreground: '#ffffff'
     dim_foreground: '#a5abb6'
   cursor:
     text: '#2e3440'
@@ -91,7 +91,7 @@ font:
 
 draw_bold_text_with_bright_colors: false
 
-background_opacity: 0.95
+background_opacity: 0.90
 
 selection:
   save_to_clipboard: true
