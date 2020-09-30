@@ -34,10 +34,26 @@ snippet temp "Basic template" b
 \end{document}$0
 endsnippet
 
+snippet prob "Basic template without title for problems" b
+\addcontentsline{toc}{section}{$1}
+\section*{$1}
+
+\textbf{Дано:} $2
+
+\textbf{Найти:} $3
+
+\begin{center}
+  \Large{\textbf{Решение} } 
+\end{center}
+
+$0
+
+endsnippet
+
 snippet temprus "Basic template" b
 \documentclass[a4paper,12pt]{article}
 
-\author{Софиа Белен Лопес Висенс}
+\author{\textbf{Софиа Белен Лопес Висенс}\\Группа Б02-903\\ \large Московский физико-технический институт}
 \title{$1}
 \date{}
 
@@ -82,10 +98,8 @@ endsnippet
 snippet lab "Lab template in russian" b
 \documentclass[a4paper,12pt]{report}
 
-\author{Софиа Белен Лопес Висенс}
-\title{$1}
+\author{\textbf{Софиа Белен Лопес Висенс}\\Группа Б02-903\\ \large Московский физико-технический институт}
 \title{\textbf{Лабораторная работа $1}\\ $2}
-\date{}
 \date{}
 
 \usepackage[margin=0.9in]{geometry}
@@ -100,9 +114,9 @@ snippet lab "Lab template in russian" b
 \begin{document}
 \maketitle
 \pagebreak
-\textbf{Цель Работы:}$2
+\textbf{Цель Работы:}$3
 
-\textbf{В работе используются:}$3
+\textbf{В работе используются:}$5
 \\\
 \\\
 \\\
@@ -110,14 +124,14 @@ snippet lab "Lab template in russian" b
 \\\
 \\\
 \\\
-$4
+$6
 \\\
 \\\
 \\\
 {\LARGE\bfЗадание}
 \\\
 \\\
-\\$5
+\\$7
 \end{document}$0
 endsnippet
 
@@ -150,6 +164,7 @@ snippet table "Table environment" b
 	\label{tab:${3:label}}
 	\begin{tabular}{${5:c}}
 	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
+        \hline
 	\end{tabular}
 \end{table}
 endsnippet
@@ -186,7 +201,7 @@ snippet pac "Package" b
 endsnippet
 
 snippet => "implies" Ai
-\implies
+\implies 
 endsnippet
 
 snippet =< "implied by" Ai
@@ -213,6 +228,10 @@ ${1:${VISUAL}}
 .\] $0
 endsnippet
 
+snippet ms "Math" wA
+\(\displaystyle ${1:${VISUAL}} \) $0
+endsnippet
+
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
@@ -232,6 +251,10 @@ endsnippet
 
 snippet // "Fraction" iA
 \\frac{$1}{$2}$0
+endsnippet
+
+snippet rrr "Real Numbers" iA
+\mathbb{R}
 endsnippet
 
 context "math()"
@@ -303,6 +326,11 @@ snippet bmat "bmat" iA
 endsnippet
 
 context "math()"
+snippet [] "left[ right]" iA
+\left[ ${1:${VISUAL}} \right] $0
+endsnippet
+
+context "math()"
 snippet () "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
@@ -315,7 +343,7 @@ snippet lr( "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
-snippet lr| "left| right|" i
+snippet || "left| right|" iA
 \left| ${1:${VISUAL}} \right| $0
 endsnippet
 
@@ -349,9 +377,9 @@ snippet 'z "zeta" wA
 \zeta
 endsnippet
 
-# snippet sum "sum" w
-# \sum_{n=${1:0}}^{${3:\infty}} ${4:${VISUAL}} $0
-# endsnippet
+snippet sum "sum" w
+\sum_{n=${1:0}}^{${3:\infty}} ${4:${VISUAL}} $0
+endsnippet
 
 snippet sum "sum" w
 \sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
@@ -513,11 +541,6 @@ snippet lll "l" iA
 endsnippet
 
 context "math()"
-snippet nabl "nabla" iA
-\nabla 
-endsnippet
-
-context "math()"
 snippet xx "cross" iA
 \times 
 endsnippet
@@ -545,7 +568,7 @@ endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -602,10 +625,9 @@ snippet set "set" wA
 \\{$1\\} $0
 endsnippet
 
-snippet || "mid" iA
- \mid 
-endsnippet
-
+#snippet || "mid" iA
+# \mid 
+#endsnippet
 
 context "math()"
 snippet cc "subset" Ai

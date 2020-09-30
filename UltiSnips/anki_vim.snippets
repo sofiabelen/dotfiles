@@ -1,0 +1,93 @@
+###########################################################################                         
+# Snippets to create anki cards using vim
+###########################################################################
+extends tex, html
+
+
+priority -50
+
+snippet tem "Cloze deletion card template" bA
+<h2>$1</h2><hr>
+
+$0
+endsnippet
+
+snippet sec "Section template" bA
+<h3>$1</h3>
+$0
+endsnippet
+
+snippet sl "Subsection template" bA
+<ol>
+    <h4><li>$1</li></h4>$0
+<ol>
+$0
+endsnippet
+
+snippet li "Item subsection template" bA
+    <h4><li>$1</li></h4>$0
+endsnippet
+
+snippet opr "Definition template" bA
+<h3>Определение: $1</h3>
+$0
+endsnippet
+
+snippet lem "Lemma template" bA
+<h3>Лемма: $1</h3>
+$0
+endsnippet
+
+snippet fr "Theorem definition" bA
+<h3>Формулировка</h3>
+$0
+endsnippet
+
+snippet dok "Proof template" bA
+<h3>Доказательство</h3>
+$0
+endsnippet
+
+snippet teo "Theorem template" bA
+<h3>Теорема $1</h3>
+$0
+endsnippet
+
+snippet cc "Cloze deletion" bA
+{{c$1::$2}}$0
+endsnippet
+
+snippet img "image-path" A
+<img src = "$1" />$0
+endsnippet
+
+snippet ci "Cloze deletion" bA
+{{c$1::<img src = "$2" />}}
+$0
+endsnippet
+
+snippet ** "bold text" A
+<b>$1</b>
+
+$0
+endsnippet
+
+snippet __ "underline" A
+<u>$1</u>
+
+$0
+endsnippet
+
+snippet ii "italics" A
+<i>$1</i>$0
+endsnippet
+
+# snippet "c([c\d]){1}" "{{c1::Cloze}}" r
+# {{c`!p snip.rv = match.group(1) if match.group(1) != 'c' else "1"`::${1:Cloze}}}
+# 
+# $0
+# endsnippet
+
+snippet slink
+[${1:link}]($1)
+endsnippet
