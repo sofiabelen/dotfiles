@@ -8,8 +8,9 @@ ranger_shortcuts="$HOME/.config/ranger/shortcuts.conf"
 qute_shortcuts="$HOME/.config/qutebrowser/shortcuts.py"
 
 shellrc="$HOME/.bashrc"
+vifm_shortcuts="$HOME/.config/vifm/shortcuts.conf"
 
-rm -f $shell_shortcuts $ranger_shortcuts $qute_shortcuts
+rm -f $shell_shortcuts $ranger_shortcuts $qute_shortcuts $vifm_shortcuts
 
 # Ensuring that output locations are properly sourced
 

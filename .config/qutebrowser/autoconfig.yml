@@ -52,7 +52,11 @@ settings:
         xb: config-cycle statusbar.hide
   content.geolocation:
     https://openweathermap.org: true
-  content.media_capture:
+  content.media.audio_capture:
+    https://discord.com: true
+  content.media.audio_video_capture:
+    https://discord.com: true
+  content.media.video_capture:
     https://discord.com: true
   content.notifications:
     http://print.mipt.ru: true
@@ -62,4 +66,6 @@ settings:
   downloads.location.directory:
     global: ~/Documents
   statusbar.show:
-    global: always
+    global: never
+  tabs.show:
+    global: switching

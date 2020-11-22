@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'crusoexia/vim-dracula'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'JuliaEditorSupport/julia-vim'
 "Plugin 'chriskempson/base16-vim'
 
 call vundle#end()

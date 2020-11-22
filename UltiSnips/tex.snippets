@@ -48,6 +48,7 @@ snippet prob "Basic template without title for problems" b
 
 $0
 
+\textbf{Ответ:} $4
 endsnippet
 
 snippet temprus "Basic template" b
@@ -115,23 +116,15 @@ snippet lab "Lab template in russian" b
 \maketitle
 \pagebreak
 \textbf{Цель Работы:}$3
-
 \textbf{В работе используются:}$5
-\\\
-\\\
-\\\
-{\LARGE\bfТеоретическое знание}
-\\\
-\\\
-\\\
+{\LARGE\bf Экспериментальная установка}
 $6
-\\\
-\\\
-\\\
-{\LARGE\bfЗадание}
-\\\
-\\\
-\\$7
+\pagebreak
+{\LARGE\bf Задание}
+$7
+\pagebreak
+{\LARGE\bf Вывод}
+$8
 \end{document}$0
 endsnippet
 
@@ -238,15 +231,26 @@ snippet ali "Align" bA
 .\end{align*}
 endsnippet
 
-
 context "math()"
 
 snippet vF "vector F" Ai
 \vec{F}$0
 endsnippet
 
+snippet ol "overline" Ai
+\overline{$1} $0
+endsnippet
+
+snippet bm "bold vector" Ai
+\bm{$1}$0
+endsnippet
+
 snippet vv "vector" Ai
 \vec{$1}$0
+endsnippet
+
+snippet vm "vector" Ai
+\mathbf{$1}$0
 endsnippet
 
 snippet // "Fraction" iA
@@ -325,12 +329,10 @@ snippet bmat "bmat" iA
 \begin{bmatrix} $1 \end{bmatrix} $0
 endsnippet
 
-context "math()"
 snippet [] "left[ right]" iA
 \left[ ${1:${VISUAL}} \right] $0
 endsnippet
 
-context "math()"
 snippet () "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
@@ -405,27 +407,22 @@ snippet part "d/dx" w
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
 endsnippet
 
-context "math()"
 snippet sq "\sqrt{}" iA
 \sqrt{${1:${VISUAL}}} $0
 endsnippet
 
-context "math()"
 snippet sr "^2" iA
 ^2
 endsnippet
 
-context "math()"
 snippet cb "^3" iA
 ^3
 endsnippet
 
-context "math()"
 snippet td "to the ... power" iA
 ^{$1}$0
 endsnippet
 
-context "math()"
 snippet rd "to the ... power" iA
 ^{($1)}$0
 endsnippet
@@ -459,48 +456,39 @@ snippet EE "geq" iA
 \exists 
 endsnippet
 
-context "math()"
 snippet AA "forall" iA
 \forall 
 endsnippet
 
-context "math()"
 snippet xnn "xn" iA
 x_{n}
 endsnippet
 
-context "math()"
 snippet ynn "yn" iA
 y_{n}
 endsnippet
 
 
-context "math()"
 snippet xii "xi" iA
 x_{i}
 endsnippet
 
-context "math()"
 snippet yii "yi" iA
 y_{i}
 endsnippet
 
-context "math()"
 snippet xjj "xj" iA
 x_{j}
 endsnippet
 
-context "math()"
 snippet yjj "yj" iA
 y_{j}
 endsnippet
 
-context "math()"
 snippet xp1 "x" iA
 x_{n+1}
 endsnippet
 
-context "math()"
 snippet xmm "x" iA
 x_{m}
 endsnippet
@@ -531,7 +519,6 @@ snippet nn "Tikz node" w
 $0
 endsnippet
 
-context "math()"
 snippet mcal "mathcal" iA
 \mathcal{$1}$0
 endsnippet
@@ -540,7 +527,6 @@ snippet lll "l" iA
 \ell
 endsnippet
 
-context "math()"
 snippet xx "cross" iA
 \times 
 endsnippet
@@ -746,11 +732,6 @@ endsnippet
 
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
-endsnippet
-
-# My snippets
-snippet equ "equation" Ai
-equation
 endsnippet
 
 # vim:ft=snippets

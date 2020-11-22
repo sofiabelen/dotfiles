@@ -43,7 +43,7 @@ color14 = #9aedfe
 color7  = #bfbfbf
 color15 = #e6e6e6
 
-#[options]
+[options]
 #scroll_on_output = false
 #scroll_on_keystroke = true
 #audible_bell = false
@@ -55,7 +55,7 @@ color15 = #e6e6e6
 #scrollback_lines = 10000
 #search_wrap = true
 #
-#font = Source Code Pro 10
+font = Source Code Pro 13
 #
 ## "system", "on" or "off"
 #cursor_blink = system

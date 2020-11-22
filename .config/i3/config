@@ -11,7 +11,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec $terminal2
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run 
-bindsym Mod1+b exec $browser
+bindsym Mod1+b exec brave-browser-nightly
 bindsym Mod1+f exec firefox
 bindsym Mod1+o exec opera
 bindsym Mod1+m exec $terminal -e vifm

@@ -320,7 +320,7 @@ c.colors.tabs.selected.even.bg = nord['nord15']
 
 # ## Foreground color of selected even tabs.
 # ## Type: QtColor
-c.colors.tabs.selected.even.fg = nord['nord5']
+c.colors.tabs.selected.even.fg = nord['nord0']
 
 # ## Background color of selected odd tabs.
 # ## Type: QtColor
@@ -328,7 +328,7 @@ c.colors.tabs.selected.odd.bg = nord['nord15']
 
 # ## Foreground color of selected odd tabs.
 # ## Type: QtColor
-c.colors.tabs.selected.odd.fg = nord['nord5']
+c.colors.tabs.selected.odd.fg = nord['nord0']
 
 ## Background color for webpages if unset (or empty to use the theme's
 ## color)

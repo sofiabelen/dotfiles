@@ -65,33 +65,33 @@ window:
   dynamic_padding: true
 font:
   normal:
-    family: Ubuntu Mono
+    #family: Fira Code
     #family: Hermit
-    #family: "Fira Code"
+    family: "Fira Code"
     #family: "Source Code Pro"
     #style: Retina
 
   # The bold font face
   bold:
-    family: Ubuntu Mono
+    #family: Ubuntu Mono
     #family: Source Code Pro
-    # family: "Fira Code"
+    family: "Fira Code"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: Ubuntu Mono
+    #family: Ubuntu Mono
     #family: Source Code Pro
-    # family: "Fira Code"
+    family: "Fira Code"
     # family: "Source Code Pro"
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 13.0
+  size: 11.0
 
 draw_bold_text_with_bright_colors: false
 
-background_opacity: 0.90
+background_opacity: 0.80
 
 selection:
   save_to_clipboard: true

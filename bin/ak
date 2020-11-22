@@ -1,0 +1,27 @@
+#!/bin/bash
+
+deck="Electrodynamics"
+if [ $# = 1 ] && [ $1 = "matan" ]
+then
+    deck="Matan"
+elif [ $# = 1 ] && [ $1 = "ph" ]
+then
+    deck="Physics"
+elif [ $# = 1 ] && [ $1 = "difuri" ]
+then
+    deck="DifferentialEq"
+elif [ $# = 1 ] && [ $1 = "teo" ]
+then
+    deck="TeorMech"
+elif [ $# = 1 ] && [ $1 = "de" ]
+then
+    deck="DiffEq"
+elif [ $# = 1 ] && [ $1 = "ec" ]
+then
+    deck="Economics"
+elif [ $# = 1 ] && [ $1 = "tmf" ]
+then
+    deck="TeorMechFast"
+fi
+echo "Deck: "$deck
+anki-vim hola5 --deckpath /home/sofia/Documents/Anki/$deck

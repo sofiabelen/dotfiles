@@ -20,7 +20,7 @@ alias ls='ls --color=auto'
 alias vi='vim'
 alias vtx='vim --servername VIM'
 alias config='/usr/bin/git --git-dir=/home/sofia/.cfg/ --work-tree=/home/sofia'
-alias zathura="devour zathura"
+# alias zathura="devour zathura"
 alias wl="sxiv -t ~/Pictures/Wallpapers/*"
 alias neofetch="neofetch --ascii ~/coffee"
 
