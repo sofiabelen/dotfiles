@@ -5,7 +5,7 @@ config.bind(";ank", "set downloads.location.directory ~/Documents/Anki/ ;; hint 
 config.bind(";pl", "set downloads.location.directory ~/Documents/Resources/Plasma/ ;; hint links download")
 config.bind(";pc", "set downloads.location.directory ~/Documents/PiC ;; hint links download")
 config.bind(";pe", "set downloads.location.directory ~/Documents/Pendulum-DE/Python ;; hint links download")
-config.bind(";tm", "set downloads.location.directory ~/Documents/TeorMech/ ;; hint links download")
+config.bind(";tm", "set downloads.location.directory ~/Documents/Theoretical-Mechanics-Problems/ ;; hint links download")
 config.bind(";n", "set downloads.location.directory ~/Documents/Notes ;; hint links download")
 config.bind(";ts", "set downloads.location.directory ~/Documents/ThirdSemester ;; hint links download")
 config.bind(";sp", "set downloads.location.directory ~/Documents/startpage ;; hint links download")

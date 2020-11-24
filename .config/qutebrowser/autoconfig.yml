@@ -54,15 +54,20 @@ settings:
     https://openweathermap.org: true
   content.media.audio_capture:
     https://discord.com: true
+    https://meet.google.com: true
   content.media.audio_video_capture:
     https://discord.com: true
   content.media.video_capture:
     https://discord.com: true
+    https://meet.google.com: true
   content.notifications:
     http://print.mipt.ru: true
     https://pomodoro-tracker.com: true
     https://www.reddit.com: true
     https://www.wildberries.ru: false
+    https://www.youtube.com: false
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: true
   downloads.location.directory:
     global: ~/Documents
   statusbar.show:
