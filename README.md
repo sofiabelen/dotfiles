@@ -1,5 +1,10 @@
 # dotfiles
 
+## Blur + Nord Colorscheme
+
+![Alt text](Pictures/Screenshots/blur1.png?raw=true)
+![Alt text](Pictures/Screenshots/blur2.png?raw=true)
+
 ## Nord Colorscheme
 
 ![Alt text](Pictures/Screenshots/nord1.png?raw=true)
