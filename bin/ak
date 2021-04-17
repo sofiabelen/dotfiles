@@ -1,24 +1,21 @@
 #!/bin/bash
 
-deck="Electrodynamics"
+deck="Physics"
 if [ $# = 1 ] && [ $1 = "matan" ]
 then
     deck="Matan"
-elif [ $# = 1 ] && [ $1 = "ph" ]
-then
-    deck="Physics"
 elif [ $# = 1 ] && [ $1 = "difuri" ]
 then
     deck="DifferentialEq"
 elif [ $# = 1 ] && [ $1 = "teo" ]
 then
     deck="TeorMech"
-elif [ $# = 1 ] && [ $1 = "de" ]
+elif [ $# = 1 ] && [ $1 = "diffuri" ]
 then
     deck="DiffEq"
-elif [ $# = 1 ] && [ $1 = "ec" ]
+elif [ $# = 1 ] && [ $1 = "de" ]
 then
-    deck="Economics"
+    deck="Deutsch"
 elif [ $# = 1 ] && [ $1 = "tmf" ]
 then
     deck="TeorMechFast"

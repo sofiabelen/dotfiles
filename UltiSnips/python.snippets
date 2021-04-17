@@ -1,0 +1,32 @@
+
+snippet plt "Basic python code for plotting" b
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from scipy.optimize import curve_fit
+from scipy.interpolate import UnivariateSpline
+
+def line(x, a, b):
+    return a*x + b
+
+data = np.genfromtxt('data.csv', names=True)
+
+popt, pcov = curve_fit(f=line, xdata=data['m'],
+        ydata=data['r']**2)
+
+print(popt[0])
+print(pcov)
+
+sns.set(context='notebook', style='darkgrid')
+fig, ax = plt.subplots(figsize=(6, 6))
+
+ax.set_xlabel(r'$$')
+ax.set_ylabel(r'$$')
+
+sns.regplot(x=data['m'], y=data['r']**2)
+
+ax.legend()
+
+fig.savefig("img/graph1.pdf")
+plt.show()
+endsnippet

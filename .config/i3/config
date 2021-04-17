@@ -16,13 +16,12 @@ bindsym Mod1+f exec firefox
 bindsym Mod1+o exec opera
 bindsym Mod1+m exec $terminal -e vifm
 bindsym Mod1+u exec $terminal -e ncmpcpp
-bindsym Mod1+p exec $terminal -e htop
+bindsym Mod1+p exec pavucontrol
 bindsym Mod1+r exec $terminal -e ranger
 bindsym Mod1+t exec qutebrowser ':open -w https://translate.yandex.com/?lang=en-ru'
 bindsym Mod1+Shift+w exec ':open -w https://web.whatsapp.com/'
 bindsym Mod1+w exec sxiv -bt ~/Pictures/Wallpapers/*
 bindsym Mod1+a exec anki
-bindsym Mod1+n exec notion-app
 bindsym $mod+u exec xdotool mousemove 50 1500
 bindsym Mod1+g exec gimp
 bindsym Mod1+q exec qutebrowser
@@ -116,9 +115,9 @@ bindsym $mod+Shift+parenleft move container to workspace $ws9
 bindsym $mod+Shift+parenright move container to workspace $ws10
 
 #Conect HDMI display
-exec --no-startup-id xrandr --output HDMI-1 --right-of eDP-1
-bindsym Mod1+shift+l exec --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
-bindsym Mod1+shift+h exec --no-startup-id xrandr --output HDMI-1 --auto --left-of eDP-1
+exec --no-startup-id xrandr --output HDMI-1-1 --right-of eDP-1
+bindsym Mod1+shift+l exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP-1
+bindsym Mod1+shift+h exec --no-startup-id xrandr --output HDMI-1-1 --auto --left-of eDP-1
 
 bindsym $mod+KP_End     workspace $ws1
 bindsym $mod+KP_Down    workspace $ws2
@@ -178,11 +177,13 @@ client.background       $bg
 
 exec_always start-pulseaudio-x11
 bindsym XF86AudioRaiseVolume exec --no-startup-id vol_up
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id vol_down
 bindsym XF86AudioMicMute exec --no-startup-id vp
 
+# Mute with usual mute key and also with Ctrl+m
+bindsym XF86AudioMute exec --no-startup-id pacmd dump|awk --non-decimal-data '$1~/set-sink-mute/{system ("pacmd "$1" "$2" "($3=="yes"?"no":"yes"))}' > /dev/null
 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym Control+m exec --no-startup-id pacmd dump|awk --non-decimal-data '$1~/set-sink-mute/{system ("pacmd "$1" "$2" "($3=="yes"?"no":"yes"))}' > /dev/null
 
 bindsym --release Print exec "scrot -q 100 ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 bindsym --release Control+Print exec "scrot -s -q 100 ~/Pictures/MyScreenshots/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
@@ -191,8 +192,11 @@ bindsym --release Shift+Print exec anki-screenshot
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
+bindsym Control+b exec headphones
+
 exec_always picom --config ~/.picom.conf
-bindsym Control+Mod1+l exec betterlockscreen -l dim #-u /home/sofia/Pictures/orange.jpg
+bindsym Control+Mod1+l exec betterlockscreen -l dim
+#-u /home/sofia/Pictures/Wallpapers/wallhaven-m9q6e9.jpg
 bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
 # exec_always --no-startup-id flashfocus
@@ -222,14 +226,9 @@ default_border pixel 2
 # default_border none
 # default_floating_border none
 
-#bindsym Mod1+1 exec zathura ~/Documents/Physics/Irodov1.pdf
-#bindsym Mod1+2 exec zathura ~/Documents/Physics/Irodov2.pdf
-#bindsym Mod1+3 exec zathura ~/Documents/Physics/Irodov3.pdf
-#bindsym Mod1+0 exec zathura ~/Documents/Physics/Irodov.pdf  
-
-bindsym Mod1+0 exec zathura ~/Documents/second_semester/Dennis_Rapaport-The_Art_of_Molecular_Dynamics_Simulation-EN.pdf
-bindsym Mod1+2 exec zathura ~/Documents/Resources/omp-hands-on-SC08.pdf
-bindsym Mod1+3 exec zathura ~/Documents/Resources/ModernC++.pdf
-bindsym Mod1+4 exec zathura ~/Documents/Resources/UsingOpenMP.pdf
-bindsym Mod1+5 exec zathura ~/Documents/Resources/ParallelScientificComputinginC++andMPI.pdf
-bindsym Mod1+9 exec zathura ~/Documents/Reads/red_queen.pdf
+bindsym Mod1+1 exec zathura ~/Documents/Resources/german-book.pdf
+bindsym Mod1+2 exec zathura ~/Documents/Resources/C2-matan.pdf
+bindsym Mod1+3 exec zathura ~/Documents/Resources/notes-theorems-matan.pdf
+bindsym Mod1+4 exec zathura ~/Documents/Resources/matan-program-bilety.pdf
+bindsym Mod1+5 exec zathura ~/Documents/Resources/notes_teormech_kholostova.pdf
+bindsym Mod1+6 exec zathura ~/Documents/Resources/NAKirichenko-Printsipy-optiki.djvu 

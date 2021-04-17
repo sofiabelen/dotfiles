@@ -3,6 +3,7 @@
 ###########################################################################
 extends tex, html
 
+context "math()"
 snippet bm "bold vector" Ai
 \mathbf{$1}$0
 endsnippet
@@ -65,8 +66,7 @@ snippet img "image-path" A
 endsnippet
 
 snippet ci "Cloze deletion" bA
-{{c$1::<img src = "$2" />}}
-$0
+{{c$1::<img src = "$2" />}}$0
 endsnippet
 
 snippet ** "bold text" A
@@ -84,12 +84,6 @@ endsnippet
 snippet ii "italics" A
 <i>$1</i>$0
 endsnippet
-
-# snippet "c([c\d]){1}" "{{c1::Cloze}}" r
-# {{c`!p snip.rv = match.group(1) if match.group(1) != 'c' else "1"`::${1:Cloze}}}
-# 
-# $0
-# endsnippet
 
 snippet slink
 [${1:link}]($1)

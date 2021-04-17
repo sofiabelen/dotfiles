@@ -1,9 +1,15 @@
 #!/bin/bash
 
-current=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
-if (( current >= 95 ))
-then
-    pactl set-sink-volume 0 100%
-else
-    pactl set-sink-volume 0 +5%
-fi
+# current=$(pacmd dump-volumes | awk 'NR==1{print $8}' | sed 's/\%//')
+# if (( current >= 95 ))
+# then
+#     pactl set-sink-volume 0 100%
+# else
+#     pactl set-sink-volume 0 +5%
+# fi
+
+VOLUME='+5%'
+for SINK in `pacmd list-sinks | grep 'index:' | cut -b12-`
+do
+  pactl set-sink-volume $SINK $VOLUME
+done

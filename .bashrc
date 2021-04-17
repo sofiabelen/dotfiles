@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+PS1='[\u @ \W]\$ '
+# export PS1="[\[\033[00;36m\]\s \W\[\033[00m\]]\$ "
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
@@ -54,8 +55,8 @@ fi
 
 set -o vi
 
-export PS1="[\[\033[00;36m\]\s \W\[\033[00m\]]\$ "
-
 source ~/.shortcuts
 #pywall theme on tty
 #source ~/.cache/wal/colors-tty.sh
+
+eval "$(thefuck --alias)"

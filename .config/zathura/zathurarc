@@ -28,13 +28,13 @@ set completion-fg               "#81A1C1"
 set completion-highlight-fg     "#8FBCBB"
 set completion-highlight-bg     "#81A1C1"
 
-set recolor-lightcolor          "rgba(46, 52, 64, 0.5)"
+set recolor-lightcolor          "rgba(46, 52, 64, 0.55)"
 set recolor-darkcolor           "#ffffff"
 
 set recolor                     "false"
 set recolor-keephue             "false"
 set recolor
-set smooth-scroll true
+# set smooth-scroll true
 set window-title-home-tilde true
 set statusbar-basename true
 set selection-clipboard clipboard

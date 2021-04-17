@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "studmdprac01@calc.cod.phystech.edu" | tr -d '\n' | xclip -selection clipboard

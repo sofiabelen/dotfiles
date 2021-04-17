@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh studmdprac01@calc.cod.phystech.edu

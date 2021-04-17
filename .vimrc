@@ -5,22 +5,25 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'ascenator/L9', {'name': 'newL9'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'mboughaba/i3config.vim'
-Plugin 'tpope/vim-eunuch'
+"Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
-Plugin 'scrooloose/nerdtree'
-Plugin 'crusoexia/vim-dracula'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'crusoexia/vim-dracula'
 Plugin 'arcticicestudio/nord-vim'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive
 Plugin 'JuliaEditorSupport/julia-vim'
 "Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
 colorscheme nord
+
+" Automatic latex substitutions for julia
+let g:latex_to_unicode_auto = 1
 
 " let g:dracula_italic = 0
 " colorscheme dracula
@@ -63,8 +66,7 @@ aug end
 "enable autocompletion
 set wildmode=longest,list,full
 
-" Enable folding according to syntax
-set foldmethod=syntax
+set foldmethod=manual
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -87,16 +89,17 @@ let g:tex_flavor = "latex"
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_compiler_method = "latexmk"
-"set conceallevel=1
-"let g:tex_conceal='abdmg'
-let g:vimtex_quickfix_latexlog = {'default' : 0}
-let g:vimtex_quickfix_latexlog = {
-         \ 'overfull' : 0,
-         \ 'underfull' : 0,
-         \ 'packages' : {
-         \   'default' : 0,
-         \ },
-         \}
+set conceallevel=1
+let g:tex_conceal='abdmg'
+let g:vimtex_quickfix_open_on_warning = 0
+" let g:vimtex_quickfix_latexlog = {'default' : 0}
+" let g:vimtex_quickfix_latexlog = {
+"          \ 'overfull' : 0,
+"          \ 'underfull' : 0,
+"          \ 'packages' : {
+"          \   'default' : 0,
+"          \ },
+"          \}
 let g:Tex_IgnoredWarnings = 
     \'Underfull'."\n".
     \'Overfull'."\n".
@@ -197,3 +200,13 @@ nnoremap tt :noh<cr>
 " nnoremap <C-p> :call PythonTexCompile() <CR>
 
 hi Normal guibg=NONE ctermbg=NONE
+
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Save and restore manual folds when we exit a file
+"augroup SaveManualFolds
+"    autocmd!
+"    au BufWrite,VimLeave ?* silent! mkview
+"    au BufRead           ?* silent! loadview
+"augroup END

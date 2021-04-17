@@ -1,0 +1,133 @@
+#!/usr/bin/python3
+
+import argparse
+import dbus
+import re
+
+def parse_arguments():
+	"""Parses command-line arguments.
+	"""
+
+	parser = argparse.ArgumentParser(description="list-modems script")
+
+	parser.add_argument("-p",
+			"--private",
+			dest="priv",
+			help="""Specifies that properties considered
+			private	should be output obfuscated vs.
+			cleartext (default).""",
+			action="store_true",
+			default=False
+			)
+
+	return parser.parse_args()
+
+args = parse_arguments()
+
+bus = dbus.SystemBus()
+
+try:
+	manager = dbus.Interface(bus.get_object('org.ofono', '/'),
+						'org.ofono.Manager')
+except dbus.exceptions.DBusException as e:
+       print("Service org.ofono not found on DBus: {}".format(e))
+       exit(1)
+
+modems = manager.GetModems()
+
+if args.priv:
+	p = re.compile(".");
+
+for path, properties in modems:
+	print("[ %s ]" % (path))
+
+	for key in properties.keys():
+		if key in ["Interfaces", "Features"]:
+			val = ""
+			for i in properties[key]:
+				val += i + " "
+		elif key in ["Serial"] and len(properties[key]) and args.priv:
+			val = p.sub("X", properties[key])
+		else:
+			val = properties[key]
+		print("    %s = %s" % (key, val))
+
+	for interface in properties["Interfaces"]:
+		object = dbus.Interface(bus.get_object('org.ofono', path),
+								interface)
+
+		print("    [ %s ]" % (interface))
+
+		try:
+			properties = object.GetProperties()
+		except:
+			continue
+
+		for key in properties.keys():
+			if key in ["Calls",
+					"MultipartyCalls",
+					"EmergencyNumbers",
+					"PreferredLanguages",
+					"PrimaryContexts",
+					"LockedPins",
+					"Features",
+					"AvailableTechnologies"]:
+				val = ""
+				for i in properties[key]:
+					val += i + " "
+
+			elif key in ["SubscriberNumbers"]:
+				val = ""
+				for i in properties[key]:
+					if args.priv:
+						val += p.sub("X", i) + " "
+					else:
+						val += i + " "
+			elif key in ["ServiceNumbers"]:
+				val = ""
+				for i in properties[key]:
+					val += "[" + i + "] = '"
+					val += properties[key][i] + "' "
+			elif key in ["MobileNetworkCodeLength",
+						"VoicemailMessageCount",
+						"MicrophoneVolume",
+						"SpeakerVolume",
+						"Strength",
+						"DataStrength",
+						"BatteryChargeLevel"]:
+				val = int(properties[key])
+			elif key in ["MainMenu"]:
+				val = ", ".join([ text + " (" + str(int(icon)) +
+					")" for text, icon in properties[key] ])
+			elif key in ["Retries"]:
+				val = ""
+				for i in properties[key]:
+					val +=  "[" + i + " = "
+					val += str(int(properties[key][i])) + "] "
+			elif key in ["Settings"]:
+				val = "{"
+				for i in properties[key].keys():
+					val += " " + i + "="
+					if i in ["DomainNameServers"]:
+						for n in properties[key][i]:
+							val += n + ","
+					else:
+						val += properties[key][i]
+				val += " }"
+
+			elif (key in ["CardIdentifier",
+					"CellId",
+					"LocationAreaCode",
+					"SubscriberIdentity",
+					"VoiceUnconditional",
+					"VoiceBusy",
+					"VoiceNoReply",
+					"VoiceNotReachable"]
+					and len(str(properties[key]))
+					and args.priv):
+				val = p.sub("X", str(properties[key]))
+			else:
+				val = properties[key]
+			print("        %s = %s" % (key, val))
+
+	print('')
