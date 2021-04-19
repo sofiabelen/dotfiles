@@ -5,28 +5,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'mboughaba/i3config.vim'
-"Plugin 'tpope/vim-eunuch'
 Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'crusoexia/vim-dracula'
 Plugin 'arcticicestudio/nord-vim'
-"Plugin 'tpope/vim-fugitive
+Plugin 'cocopon/iceberg.vim'
 Plugin 'JuliaEditorSupport/julia-vim'
-"Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
-colorscheme nord
+colorscheme iceberg
 
 " Automatic latex substitutions for julia
 let g:latex_to_unicode_auto = 1
-
-" let g:dracula_italic = 0
-" colorscheme dracula
 
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -51,11 +42,6 @@ set number relativenumber
 " needs +clipboard, check using vim --version | grep clipboard
 " if not, install gvim 
 set clipboard=unnamedplus
-
-"lightline configs
-"let g:lightline = {'colorscheme':'wombat'}
-"set laststatus=2
-"set noshowmode
 
 "i3 config syntax highlighting
 aug i3config_ft_detection
@@ -89,8 +75,8 @@ let g:tex_flavor = "latex"
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_quickfix_mode = 2
 let g:vimtex_compiler_method = "latexmk"
-set conceallevel=1
-let g:tex_conceal='abdmg'
+" set conceallevel=1
+" let g:tex_conceal='abdmg'
 let g:vimtex_quickfix_open_on_warning = 0
 " let g:vimtex_quickfix_latexlog = {'default' : 0}
 " let g:vimtex_quickfix_latexlog = {
@@ -138,66 +124,6 @@ nmap <C-o> o<Esc>k
 
 " Clear search highlight
 nnoremap tt :noh<cr>
-
-" Copyright 2019 Google LLC
-"
-" Licensed under the Apache License, Version 2.0 (the "License");
-" you may not use this file except in compliance with the License.
-" You may obtain a copy of the License at
-"
-"    https://www.apache.org/licenses/LICENSE-2.0
-"
-" Unless required by applicable law or agreed to in writing, software
-" distributed under the License is distributed on an "AS IS" BASIS,
-" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-" See the License for the specific language governing permissions and
-" limitations under the License.
-
-" Indent Python in the Google way.
-" 
-" setlocal indentexpr=GetGooglePythonIndent(v:lnum)
-" 
-" let s:maxoff = 50 " maximum number of lines to look backwards.
-" 
-" function GetGooglePythonIndent(lnum)
-" 
-"   " Indent inside parens.
-"   " Align with the open paren unless it is at the end of the line.
-"   " E.g.
-"   "   open_paren_not_at_EOL(100,
-"   "                         (200,
-"   "                          300),
-"   "                         400)
-"   "   open_paren_at_EOL(
-"   "       100, 200, 300, 400)
-"   call cursor(a:lnum, 1)
-"   let [par_line, par_col] = searchpairpos('(\|{\|\[', '', ')\|}\|\]', 'bW',
-"         \ "line('.') < " . (a:lnum - s:maxoff) . " ? dummy :"
-"         \ . " synIDattr(synID(line('.'), col('.'), 1), 'name')"
-"         \ . " =~ '\\(Comment\\|String\\)$'")
-"   if par_line > 0
-"     call cursor(par_line, 1)
-"     if par_col != col("$") - 1
-"       return par_col
-"     endif
-"   endif
-" 
-"   " Delegate the rest to the original function.
-"   return GetPythonIndent(a:lnum)
-" 
-" endfunction
-" 
-" let pyindent_nested_paren="&sw*2"
-" let pyindent_open_paren="&sw*2"
-
-" Python inside latex, never worked too well
-" function! PythonTexCompile()
-"     silent !clear
-"     call vimtex#compiler#compile_ss()
-"     execute '!pythontex' fnameescape(b:vimtex.tex)
-"     call vimtex#compiler#compile_ss()
-" endfunction
-" nnoremap <C-p> :call PythonTexCompile() <CR>
 
 hi Normal guibg=NONE ctermbg=NONE
 

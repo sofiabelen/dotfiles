@@ -1,20 +1,20 @@
 # Base16 Nord
 # Author: arcticicestudio
 
-set default-bg                  "#e8e9ec"
-set default-fg                  "#33374c"
+set default-bg                  "rgba(46, 52, 64, 0.8)"
+set default-fg                  "#3B4252"
 
-set statusbar-fg                "#dcdfe7"
-set statusbar-bg                "#2d539e"
+set statusbar-fg                "#D8DEE9"
+set statusbar-bg                "#434C5E"
 
-set inputbar-bg                 "#2d539e"
-set inputbar-fg                 "#33374c"
+set inputbar-bg                 "#2E3440"
+set inputbar-fg                 "#8FBCBB"
 
 set notification-bg             "#2E3440"
 set notification-fg             "#8FBCBB"
 
-set notification-error-bg       "#7759b4"
-set notification-error-fg       "#dcdfe7"
+set notification-error-bg       "#2E3440"
+set notification-error-fg       "#BF616A"
 
 set notification-warning-bg     "#2E3440"
 set notification-warning-fg     "#BF616A"
@@ -30,17 +30,19 @@ set completion-highlight-bg     "#81A1C1"
 
 # recolor-lightcolor Defines the color value that is used to represent light colors in recoloring mode
 # recolor-darkcolor Defines the color value that is used to represent dark colors in recoloring mode
-set recolor-lightcolor          "#e8e9ec"
-set recolor-darkcolor           "#000000"
+set recolor-lightcolor          "rgba(46, 52, 64, 0.55)"
+set recolor-darkcolor           "#ffffff"
 
 # Get rid of statusbar by default
 set guioptions none
 
 set recolor-keephue             "true"
+set recolor                     "true"
+# set recolor
+# set smooth-scroll true
 set window-title-home-tilde true
 set statusbar-basename true
 set selection-clipboard clipboard
-set recolor                     "true"
 
 map i recolor
 map xb toggle_statusbar

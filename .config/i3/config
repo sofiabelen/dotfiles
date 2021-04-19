@@ -156,15 +156,17 @@ bindsym Control+j resize grow height 7 px or 7 ppt
 bindsym Control+k resize shrink height 7 px or 7 ppt
 bindsym Control+l resize grow width 7 px or 7 ppt
 
-# bindsym $mod+n exec --no-startup-id flash_window
+bindsym $mod+n exec --no-startup-id flash_window
 
 set $fg #F8F8F2
 set $fg-inactive #F8F8F2
 set $bg #262626
-set $active #f0fcff
+# set $active #f0fcff
+set $active #3b4252
 set $inactive #3b4252
 set $urgent #bf616a
-set $indicator #b48ead
+# set $indicator #b48ead
+set $indicator #262626
 
 # class                 border          backgr.    text            indicator   child_border
 client.focused          $bg             $bg        $fg             $indicator  $active
@@ -199,7 +201,7 @@ bindsym Control+Mod1+l exec betterlockscreen -l dim
 #-u /home/sofia/Pictures/Wallpapers/wallhaven-m9q6e9.jpg
 bindsym Control+Mod1+o exec gllock
 exec_always --no-startup-id parcellite -n
-# exec_always --no-startup-id flashfocus
+exec_always --no-startup-id flashfocus
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
 exec --no-startup-id ~/.fehbg &
@@ -212,7 +214,7 @@ exec_always xset s off
 #disable power savinf feature
 exec_always xset -dpms
 
-gaps inner 6
+gaps inner 4
 gaps outer 1
 smart_gaps on
 hide_edge_borders smart_no_gaps
@@ -226,9 +228,5 @@ default_border pixel 2
 # default_border none
 # default_floating_border none
 
-bindsym Mod1+1 exec zathura ~/Documents/Resources/german-book.pdf
-bindsym Mod1+2 exec zathura ~/Documents/Resources/C2-matan.pdf
-bindsym Mod1+3 exec zathura ~/Documents/Resources/notes-theorems-matan.pdf
-bindsym Mod1+4 exec zathura ~/Documents/Resources/matan-program-bilety.pdf
-bindsym Mod1+5 exec zathura ~/Documents/Resources/notes_teormech_kholostova.pdf
-bindsym Mod1+6 exec zathura ~/Documents/Resources/NAKirichenko-Printsipy-optiki.djvu 
+bindsym Control+d exec dark-theme
+bindsym Control+i exec light-theme

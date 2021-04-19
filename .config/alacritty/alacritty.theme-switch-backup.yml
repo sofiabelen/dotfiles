@@ -1,0 +1,69 @@
+colors:
+  primary:
+    background: '#ffffff'
+    foreground: '#33374c'
+    dim_foreground: '#a5abb6'
+    bright_foreground: '#5e5c64'
+  cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
+  normal:
+    black: '#dcdfe7'
+    red: '#cc517a'
+    green: '#668e3d'
+    yellow: '#c57339'
+    blue: '#2d539e'
+    magenta: '#7759b4'
+    cyan: '#3f83a6'
+    white: '#33374c'
+  bright:
+    black: '#8389a3'
+    red: '#cc3768'
+    green: '#598030'
+    yellow: '#b6662d'
+    blue: '#22478e'
+    magenta: '#6845ad'
+    cyan: '#327698'
+    white: '#262a3f'
+  dim:
+    black: '#373e4d'
+    red: '#94545d'
+    green: '#809575'
+    yellow: '#b29e75'
+    blue: '#68809a'
+    magenta: '#8c738c'
+    cyan: '#6d96a5'
+    white: '#aeb3bb'
+window:
+  padding:
+    x: 9
+    'y': 9
+  dynamic_padding: true
+font:
+  normal:
+    family: Fira Code
+  bold:
+    family: Fira Code
+  italic:
+    family: Fira Code
+  size: 11
+draw_bold_text_with_bright_colors: false
+background_opacity: 1
+selection:
+  save_to_clipboard: true
+cursor:
+  style: Block
+  unfocused_hollow: true

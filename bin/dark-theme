@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cp ~/.config/alacritty/themes/nord.yml ~/.config/alacritty/alacritty.yml
+
+awk '/^colorscheme/{$2="nord"}1' ~/.vimrc > ~/Downloads/tmp-theme
+mv ~/Downloads/tmp-theme ~/.vimrc
+
+cp ~/.config/zathura/themes/nord ~/.config/zathura/zathurarc
