@@ -229,4 +229,9 @@ default_border pixel 2
 # default_floating_border none
 
 bindsym Control+d exec dark-theme
-bindsym Control+i exec light-theme
+bindsym Control+u exec light-theme
+
+bindsym Mod1+1 exec zathura ~/Documents/TheSubtleArtofNotGivingaFuck.pdf 
+
+bindsym Mod1+n exec $terminal -e create-note
+bindsym Control+n exec $terminal -e vifm /home/sofia/Documents/Notes/

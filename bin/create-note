@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dir="/home/sofia/Documents/Notes/"
+name=$(date --iso-8601='seconds' | sed 's/://g')
+
+vim  -c 'startinsert' $dir$name
