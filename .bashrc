@@ -23,7 +23,8 @@ alias vtx='vim --servername VIM'
 alias config='/usr/bin/git --git-dir=/home/sofia/.cfg/ --work-tree=/home/sofia'
 # alias zathura="devour zathura"
 alias wl="sxiv -t ~/Pictures/Wallpapers/*"
-alias neofetch="neofetch --ascii ~/coffee"
+alias neofetch="neofetch --ascii ~/rabbit"
+alias f="clear; colorscript -e square"
 
 # # ex - archive extractor
 # # usage: ex <file>
@@ -60,3 +61,5 @@ source ~/.shortcuts
 #source ~/.cache/wal/colors-tty.sh
 
 eval "$(thefuck --alias)"
+
+colorscript -e square
