@@ -37,8 +37,8 @@ c.auto_save.session = True
 ## Valid values:
 ##   - webengine: Use QtWebEngine (based on Chromium).
 ##   - webkit: Use QtWebKit (based on WebKit, similar to Safari).
-c.backend = 'webengine'
-# c.backend = 'webkit'
+# c.backend = 'webengine'
+c.backend = 'webkit'
 
 ## This setting can be used to map keys to other keys. When the key used
 ## as dictionary-key is pressed, the binding for the key used as
@@ -1884,14 +1884,14 @@ config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always switching')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always switching')
 
-config.set("colors.webpage.darkmode.enabled", True)
-
 ## This solves the white flashing in between pages loading
 config.set('colors.webpage.bg', 'black')
 
 ## List of user stylesheet filenames to use.
 ## Type: List of File, or File
-c.content.user_stylesheets = ['nord-dark-all-sites.css']
+# c.content.user_stylesheets = ['nord-dark-all-sites.css']
+# 
+# config.set("colors.webpage.darkmode.enabled", True)
 
 # https://www.reddit.com/r/qutebrowser/comments/glo28l/how_do_you_use_a_css_stylesheet/
 # https://github.com/qutebrowser/qutebrowser/issues/4994
@@ -1902,7 +1902,8 @@ config.bind('xi', 'config-cycle colors.webpage.darkmode.enabled true false ;; re
 
 config.bind('xa', 'config-cycle colors.webpage.bg white black')
 
-config.source('nord-qutebrowser.py')
+# config.source('nord-qutebrowser.py')
+config.source('monokai-qutebrowser.py')
 
 # ==== Youtube Add Blocking ==== {{{
 def filter_yt(info: interceptor.Request):
@@ -1916,3 +1917,11 @@ def filter_yt(info: interceptor.Request):
         info.block()
 
 interceptor.register(filter_yt)
+
+
+## Translate
+## https://github.com/AckslD/Qute-Translate
+config.bind(';t', 'hint userscript link translate')
+config.bind(';T', 'hint userscript all translate --text')
+config.bind('<Ctrl+T>', 'spawn --userscript translate')
+config.bind('<Ctrl+Shift+T>', 'spawn --userscript translate --text')

@@ -1,0 +1,49 @@
+set default-bg                  "rgba(39, 40, 34, 0.8)"
+set default-fg                  "#33374c"
+
+set statusbar-fg                "#F8F8F2"
+set statusbar-bg                "#413E34"
+
+set inputbar-bg                 "#75715E"
+set inputbar-fg                 "#F4BF75"
+
+set notification-bg             "#75715E"
+set notification-fg             "#F4BF75"
+
+set notification-error-bg       "#75715E"
+set notification-error-fg       "#F8F8F2"
+
+set notification-warning-bg     "#75715E"
+set notification-warning-fg     "#F8F8F2"
+
+set highlight-color             "#EBCB8B"
+set highlight-active-color      "#A1EFE4"
+
+set completion-bg               "#272822"
+set completion-fg               "#F92672"
+
+set completion-highlight-fg     "#272822"
+set completion-highlight-bg     "#F4BF75"
+
+# recolor-lightcolor Defines the color value that is used to represent light colors in recoloring mode
+# recolor-darkcolor Defines the color value that is used to represent dark colors in recoloring mode
+set recolor-lightcolor          "#e8e9ec"
+set recolor-darkcolor           "#000000"
+
+# Get rid of statusbar by default
+set guioptions none
+
+set recolor-keephue             "true"
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+set recolor                     "true"
+
+map i recolor
+map xb toggle_statusbar
+map K zoom in
+map J zoom out
+map L navigate next
+map H navigate previous
+
+set adjust-open width

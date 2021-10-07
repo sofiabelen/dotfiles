@@ -1,0 +1,71 @@
+colors:
+  # Default colors
+  primary:
+    background: '0xf9f8f5'
+    foreground: '0x49483e'
+
+  # Normal colors
+  normal:
+    black:   '0x272822'
+    red:     '0xf92672'
+    green:   '0xa6e22e'
+    yellow:  '0xf4bf75'
+    blue:    '0x66d9ef'
+    magenta: '0xae81ff'
+    cyan:    '0xa1efe4'
+    white:   '0xf8f8f2'
+
+  # Bright colors
+  bright:
+    black:   '0x75715e'
+    red:     '0xf92672'
+    green:   '0xa6e22e'
+    yellow:  '0xf4bf75'
+    blue:    '0x66d9ef'
+    magenta: '0xae81ff'
+    cyan:    '0xa1efe4'
+    white:   '0xf9f8f5'
+
+# Padding
+window:
+  padding:
+    x: 9
+    y: 9
+  dynamic_padding: true
+font:
+  normal:
+    family: Fira Code
+    #family: Hermit
+    #family: "Fira Code"
+    #family: "Source Code Pro"
+    #style: Retina
+
+  # The bold font face
+  bold:
+    #family: Ubuntu Mono
+    #family: Source Code Pro
+    family: "Fira Code"
+    # family: "Source Code Pro"
+
+  # The italic font face
+  italic:
+    #family: Ubuntu Mono
+    #family: Source Code Pro
+    family: "Fira Code"
+    # family: "Source Code Pro"
+    # style: "Medium Italic"
+
+  # Point size of the font
+  size: 10
+
+draw_bold_text_with_bright_colors: false
+
+  # background_opacity: 0.9
+background_opacity: 1
+
+selection:
+  save_to_clipboard: true
+
+cursor:
+  style: Block
+  unfocused_hollow: true

@@ -1,46 +1,45 @@
-# Base16 Nord
-# Author: arcticicestudio
+set default-bg                  "rgba(39, 40, 34, 0.8)"
+set default-fg                  "#3B4252"
 
-set default-bg                  "#e8e9ec"
-set default-fg                  "#33374c"
+set statusbar-fg                "#F8F8F2"
+set statusbar-bg                "#413E34"
 
-set statusbar-fg                "#dcdfe7"
-set statusbar-bg                "#2d539e"
+set inputbar-bg                 "#75715E"
+set inputbar-fg                 "#F4BF75"
 
-set inputbar-bg                 "#2d539e"
-set inputbar-fg                 "#33374c"
+set notification-bg             "#75715E"
+set notification-fg             "#F4BF75"
 
-set notification-bg             "#2E3440"
-set notification-fg             "#8FBCBB"
+set notification-error-bg       "#75715E"
+set notification-error-fg       "#F8F8F2"
 
-set notification-error-bg       "#7759b4"
-set notification-error-fg       "#dcdfe7"
-
-set notification-warning-bg     "#2E3440"
-set notification-warning-fg     "#BF616A"
+set notification-warning-bg     "#75715E"
+set notification-warning-fg     "#F8F8F2"
 
 set highlight-color             "#EBCB8B"
-set highlight-active-color      "#81A1C1"
+set highlight-active-color      "#A1EFE4"
 
-set completion-bg               "#3B4252"
-set completion-fg               "#81A1C1"
+set completion-bg               "#272822"
+set completion-fg               "#F92672"
 
-set completion-highlight-fg     "#8FBCBB"
-set completion-highlight-bg     "#81A1C1"
+set completion-highlight-fg     "#272822"
+set completion-highlight-bg     "#F4BF75"
 
 # recolor-lightcolor Defines the color value that is used to represent light colors in recoloring mode
 # recolor-darkcolor Defines the color value that is used to represent dark colors in recoloring mode
-set recolor-lightcolor          "#e8e9ec"
-set recolor-darkcolor           "#000000"
+set recolor-lightcolor          "rgba(39, 40, 34, 0.8)"
+set recolor-darkcolor           "#ffffff"
 
 # Get rid of statusbar by default
 set guioptions none
 
 set recolor-keephue             "true"
+set recolor                     "true"
+# set recolor
+# set smooth-scroll true
 set window-title-home-tilde true
 set statusbar-basename true
 set selection-clipboard clipboard
-set recolor                     "true"
 
 map i recolor
 map xb toggle_statusbar

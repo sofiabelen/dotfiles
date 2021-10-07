@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cp ~/.config/alacritty/themes/nord.yml ~/.config/alacritty/alacritty.yml
+# cp ~/.config/alacritty/themes/nord.yml ~/.config/alacritty/alacritty.yml
+cp ~/.config/alacritty/themes/monokai.yml ~/.config/alacritty/alacritty.yml
 
-awk '/^colorscheme/{$2="nord"}1' ~/.vimrc > ~/Downloads/tmp-theme
+# awk '/^colorscheme/{$2="nord"} /^set background/{$2="background=dark"}1' ~/.vimrc > ~/Downloads/tmp-theme
+awk '/^colorscheme/{$2="monokai"} /^set background/{$2="background=dark"}1' ~/.vimrc > ~/Downloads/tmp-theme
 mv ~/Downloads/tmp-theme ~/.vimrc
 
 cp ~/.config/zathura/themes/nord ~/.config/zathura/zathurarc

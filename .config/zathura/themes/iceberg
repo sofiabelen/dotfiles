@@ -1,7 +1,8 @@
 # Base16 Nord
 # Author: arcticicestudio
 
-set default-bg                  "#e8e9ec"
+# set default-bg                  "rgba(34, 71, 142, 0.3)"
+set default-bg                  "rgba(46, 52, 64, 0.8)"
 set default-fg                  "#33374c"
 
 set statusbar-fg                "#dcdfe7"

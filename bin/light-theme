@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# cp ~/.config/alacritty/themes/iceberg.yml ~/.config/alacritty/alacritty.yml
 cp ~/.config/alacritty/themes/iceberg.yml ~/.config/alacritty/alacritty.yml
 
-awk '/^colorscheme/{$2="iceberg"}1' ~/.vimrc > ~/Downloads/tmp-theme
+awk '/^colorscheme/{$2="iceberg"} /^set background/{$2="background=light"}1' ~/.vimrc > ~/Downloads/tmp-theme
 mv ~/Downloads/tmp-theme ~/.vimrc
 
 cp ~/.config/zathura/themes/iceberg ~/.config/zathura/zathurarc

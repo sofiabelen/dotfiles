@@ -14,7 +14,7 @@ Plugin 'JuliaEditorSupport/julia-vim'
 
 call vundle#end()
 
-colorscheme iceberg
+colorscheme monokai
 
 " Automatic latex substitutions for julia
 let g:latex_to_unicode_auto = 1

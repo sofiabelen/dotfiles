@@ -1,0 +1,77 @@
+# Base16 Monokai - alacritty color config
+# Wimer Hazenberg (http://www.monokai.nl)
+colors:
+  # Default colors
+  primary:
+    background: '0x272822'
+    foreground: '0xf8f8f2'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x272822'
+    cursor: '0xf8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '0x272822'
+    red:     '0xf92672'
+    green:   '0xa6e22e'
+    yellow:  '0xf4bf75'
+    blue:    '0x66d9ef'
+    magenta: '0xae81ff'
+    cyan:    '0xa1efe4'
+    white:   '0xf8f8f2'
+
+  # Bright colors
+  bright:
+    black:   '0x75715e'
+    red:     '0xfd971f'
+    green:   '0x383830'
+    yellow:  '0x49483e'
+    blue:    '0xa59f85'
+    magenta: '0xf5f4f1'
+    cyan:    '0xcc6633'
+    white:   '0xf9f8f5'
+
+# Padding
+window:
+  padding:
+    x: 9
+    y: 9
+  dynamic_padding: true
+font:
+  normal:
+    family: Fira Code
+    #family: Hermit
+    #family: "Fira Code"
+    #family: "Source Code Pro"
+    #style: Retina
+
+  # The bold font face
+  bold:
+    #family: Ubuntu Mono
+    #family: Source Code Pro
+    family: "Fira Code"
+    # family: "Source Code Pro"
+
+  # The italic font face
+  italic:
+    #family: Ubuntu Mono
+    #family: Source Code Pro
+    family: "Fira Code"
+    # family: "Source Code Pro"
+    # style: "Medium Italic"
+
+  # Point size of the font
+  size: 10
+
+draw_bold_text_with_bright_colors: false
+
+background_opacity: 0.95
+
+selection:
+  save_to_clipboard: true
+
+cursor:
+  style: Block
+  unfocused_hollow: true

@@ -158,13 +158,13 @@ bindsym $mod+n exec --no-startup-id flash_window
 
 set $fg #F8F8F2
 set $fg-inactive #F8F8F2
-set $bg #262626
+set $bg #272822
 # set $active #f0fcff
-set $active #3b4252
-set $inactive #3b4252
-set $urgent #bf616a
+set $active #272822
+set $inactive #272822
+set $urgent #F92672
 # set $indicator #b48ead
-set $indicator #262626
+set $indicator #AE81FF
 
 # class                 border          backgr.    text            indicator   child_border
 client.focused          $bg             $bg        $fg             $indicator  $active
@@ -193,6 +193,7 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 bindsym Control+b exec headphones
+bindsym Control+Mod1+b exec MiSpeaker
 
 exec_always picom --config ~/.picom.conf
 bindsym Control+Mod1+l exec betterlockscreen -l dim
@@ -226,13 +227,13 @@ default_border pixel 2
 # default_border none
 # default_floating_border none
 
-bindsym Control+d exec dark-theme
-bindsym Control+u exec light-theme
+bindsym Control+p exec dark-theme
+bindsym Control+y exec light-theme
 
 bindsym Mod1+1 exec zathura ~/Documents/TheSubtleArtofNotGivingaFuck.pdf 
 
-bindsym Mod1+n exec $terminal -e create-note
-bindsym Control+n exec $terminal -e vifm /home/sofia/Documents/Notes/
+bindsym Mod1+Comma exec $terminal -e create-note
+bindsym Mod1+Shift+Comma exec $terminal -e vifm /home/sofia/Documents/Notes/
 bindsym Mod1+r exec $terminal -e vifm /home/sofia/Documents/Resources/
 bindsym Mod1+u exec $terminal -e vifm /home/sofia/Downloads/
 bindsym Mod1+d exec $terminal -e vifm /home/sofia/Documents/
